@@ -10,7 +10,7 @@ The Atum A3 Nano board is pre-programmed with a default configuration. This demo
 
 - **Family**: Agilex 3
 - **Quartus Version**: 25.1
-- **Development Kit**: Atum A3 Nano
+- **Development Kit**: Terasic Atum A3 Nano
 - **Device Part**: A3CZ135BB18AE7S
 - **Category**: Factory Code, Demonstration
 - **URL**: https://github.com/terasic/Atum-A3-Nano/tree/rel/25.1/Default_Code
