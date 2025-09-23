@@ -1,0 +1,21 @@
+13:41:43 **** Incremental Build of configuration Debug for project system_app ****
+"C:\\altera_pro\\25.1\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 86%] Built target hal2_bsp
+[ 97%] Built target app.elf
+[ 99%] Built target create-objdump
+[ 98%] Reporting memory available for stack + heap in app.elf.
+process_begin: CreateProcess(NULL, niosv-stack-report -p riscv32-unknown-elf- app.elf, ...) failed.
+make (e=2): The system cannot find the file specified.
+make[2]: *** [CMakeFiles/niosv-stack-report.dir/build.make:73: app.elf.stack_report] Error 2
+make[1]: *** [CMakeFiles/Makefile2:180: CMakeFiles/niosv-stack-report.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[100%] Creating intel_onchip_memory.hex.
+process_begin: CreateProcess(NULL, elf2hex app.elf -o intel_onchip_memory.hex -b 0x00000000 -w 32 -e 0x0007CFFF -r 4, ...) failed.
+make (e=2): The system cannot find the file specified.
+make[2]: *** [CMakeFiles/create-hex.dir/build.make:73: intel_onchip_memory.hex] Error 2
+make[1]: *** [CMakeFiles/Makefile2:211: CMakeFiles/create-hex.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+"C:/altera_pro/25.1/riscfree/build_tools/bin/make.exe -j all" terminated with exit code 2. Build might be incomplete.
+
+13:41:54 Build Failed. 6 errors, 0 warnings. (took 10s.430ms)
+

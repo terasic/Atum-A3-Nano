@@ -1,0 +1,6 @@
+DATE = "Fri Apr 12 10:01:00 2024"
+QUARTUS_VERSION = "24.1"
+
+# Revisions
+
+PROJECT_REVISION = "golden_top"

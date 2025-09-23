@@ -1,0 +1,239 @@
+16:32:20 **** Incremental Build of configuration Debug for project nios_app ****
+"C:\\altera_pro\\25.1\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[  1%] Building ASM object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ecc_exception_entry.S.obj
+[  2%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.obj
+[  8%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fcntl.c.obj
+[  3%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dev.c.obj
+[ 10%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_busy_sleep.c.obj
+[  4%] Building ASM object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/machine_trap.S.obj
+[  7%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_alarm_start.c.obj
+[  9%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_close.c.obj
+[  5%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dev_llist_insert.c.obj
+[ 11%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_do_dtors.c.obj
+[ 13%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_errno.c.obj
+[  5%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dcache_flush.c.obj
+[ 14%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_execve.c.obj
+[ 17%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_irq_handler.c.obj
+[ 24%] Building ASM object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/crt0.S.obj
+[  7%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_find_file.c.obj
+[ 12%] Building ASM object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_mcount.S.obj
+[ 27%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_do_ctors.c.obj
+[  3%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_env_lock.c.obj
+[ 32%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dma_rxchan_open.c.obj
+[ 22%] Building ASM object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_vic_vector_table.S.obj
+[ 31%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_icache_flush_all.c.obj
+[ 28%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_exit.c.obj
+[ 16%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_environ.c.obj
+[ 15%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dcache_flush_all.c.obj
+[ 19%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_gmon.c.obj
+[ 23%] Building ASM object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_log_macro.S.obj
+[ 18%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fd_lock.c.obj
+[ 25%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_icache_flush.c.obj
+[ 14%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fork.c.obj
+[ 35%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fd_unlock.c.obj
+[ 37%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_kill.c.obj
+[ 29%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_find_dev.c.obj
+[ 36%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_iic.c.obj
+[ 38%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_getchar.c.obj
+[ 21%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ecc_exception.c.obj
+[ 40%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_gettod.c.obj
+[ 43%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_instruction_exception_register.c.obj
+[ 39%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_isatty.c.obj
+[ 48%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_load.c.obj
+[ 20%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dma_txchan_open.c.obj
+[ 34%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_link.c.obj
+[ 48%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_iic_isr_register.c.obj
+[ 26%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_flash_dev.c.obj
+[ 30%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fstat.c.obj
+[ 41%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_get_fd.c.obj
+[ 50%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_open.c.obj
+[ 55%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_remap_uncached.c.obj
+[ 42%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_putstr.c.obj
+[ 47%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_read.c.obj
+[ 53%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_release_fd.c.obj
+[ 45%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fs_reg.c.obj
+[ 50%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_main.c.obj
+[ 52%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_io_redirect.c.obj
+[ 44%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ioctl.c.obj
+[ 64%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_stat.c.obj
+[ 63%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.obj
+[ 69%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_wait.c.obj
+[ 61%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_remap_cached.c.obj
+[ 58%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_printf.c.obj
+[ 72%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_unlink.c.obj
+[ 68%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/mtimer.c.obj
+[ 51%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_log_printf.c.obj
+[ 74%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.obj
+[ 62%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_putchar.c.obj
+[ 60%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_tls.c.obj
+[ 54%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_malloc_lock.c.obj
+[ 47%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_putcharbuf.c.obj
+[ 65%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_tick.c.obj
+[ 33%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ecc_error_inject.c.obj
+[ 67%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_usleep.c.obj
+[ 71%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/alt_sys_init.c.obj
+[ 75%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_vic_isr_wrapper.c.obj
+[ 70%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_uncached_malloc.c.obj
+[ 66%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_write.c.obj
+[ 81%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_timer_sc.c.obj
+[ 78%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_timer_ts.c.obj
+[ 75%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_sysid_qsys.c.obj
+[ 77%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_timer_vars.c.obj
+[ 82%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj
+[ 49%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_getpid.c.obj
+[ 50%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_rename.c.obj
+[ 87%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.obj
+[ 80%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_uncached_free.c.obj
+[ 83%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.obj
+[ 77%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.obj
+[ 59%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_settod.c.obj
+[ 56%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_sbrk.c.obj
+[ 79%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.obj
+[ 78%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.obj
+[ 86%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.obj
+[ 73%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_times.c.obj
+[ 84%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.obj
+[ 86%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_niosv_irq.c.obj
+[ 57%] Building C object nios_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_lseek.c.obj
+[ 88%] Linking C static library libhal2_bsp.a
+[ 88%] Built target hal2_bsp
+[ 90%] Building C object CMakeFiles/nios_app.elf.dir/ff.c.obj
+[ 92%] Building C object CMakeFiles/nios_app.elf.dir/terasic_sdcard/debug.c.obj
+[ 89%] Building C object CMakeFiles/nios_app.elf.dir/terasic_sdcard/crc7.c.obj
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c: In function 'debug_output':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c:55:5: warning: format not a string literal and no format arguments [-Wformat-security]
+   55 |     printf(pMessage);
+      |     ^~~~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c: In function 'myprintf_hexarray':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c:83:17: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+   83 |         sprintf(szText, "[%02X]", *(pHex+i));
+      |                 ^~~~~~
+      |                 |
+      |                 unsigned char *
+In file included from D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c:33:
+C:/altera_pro/25.1/riscfree/toolchain/riscv32-unknown-elf/riscv32-unknown-elf/include/stdio.h:250:18: note: expected 'char * restrict' but argument is of type 'unsigned char *'
+  250 | int     sprintf (char *__restrict, const char *__restrict, ...)
+      |                  ^
+In file included from D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c:36:
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c:84:16: warning: pointer targets in passing argument 1 of 'myprintf' differ in signedness [-Wpointer-sign]
+   84 |         DEBUG((szText));
+      |                ^~~~~~
+      |                |
+      |                unsigned char *
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.h:72:46: note: in definition of macro 'DEBUG'
+   72 |     #define DEBUG(x)               {myprintf x;}  // standard in/out, specifed in project (it could be uart, jtag, or lcd)
+      |                                              ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/debug.c:64:20: note: expected 'char *' but argument is of type 'unsigned char *'
+   64 | int myprintf(char *format, ...){
+      |              ~~~~~~^~~~~~
+[ 95%] Building C object CMakeFiles/nios_app.elf.dir/terasic_sdcard/sd_lib.c.obj
+[ 92%] Building C object CMakeFiles/nios_app.elf.dir/glue.c.obj
+[ 96%] Building C object CMakeFiles/nios_app.elf.dir/ffunicode.c.obj
+[ 93%] Building C object CMakeFiles/nios_app.elf.dir/main.c.obj
+[ 95%] Building C object CMakeFiles/nios_app.elf.dir/diskio.c.obj
+[ 94%] Building C object CMakeFiles/nios_app.elf.dir/ffsystem.c.obj
+[ 97%] Building C object CMakeFiles/nios_app.elf.dir/terasic_sdcard/sd_protocol.c.obj
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_lib.c: In function 'SDLIB_WriteBlock512':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_lib.c:329:32: warning: passing argument 1 of 'SD_WriteData512' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  329 |     bSuccess = SD_WriteData512(szDataWrite);  // Write 512 bytes
+      |                                ^~~~~~~~~~~
+In file included from D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_lib.c:45:
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.h:60:29: note: expected 'alt_u8 *' {aka 'unsigned char *'} but argument is of type 'const alt_u8 *' {aka 'const unsigned char *'}
+   60 | bool SD_WriteData512(alt_u8 szDataWrite[]);
+      |                      ~~~~~~~^~~~~~~~~~~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'RAM_disk_status':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:123:1: warning: control reaches end of non-void function [-Wreturn-type]
+  123 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'RAM_disk_initialize':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:127:1: warning: control reaches end of non-void function [-Wreturn-type]
+  127 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'RAM_disk_read':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:135:1: warning: control reaches end of non-void function [-Wreturn-type]
+  135 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'RAM_disk_write':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:143:1: warning: control reaches end of non-void function [-Wreturn-type]
+  143 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'USB_disk_status':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:148:1: warning: control reaches end of non-void function [-Wreturn-type]
+  148 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'USB_disk_initialize':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:152:1: warning: control reaches end of non-void function [-Wreturn-type]
+  152 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'USB_disk_read':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:160:1: warning: control reaches end of non-void function [-Wreturn-type]
+  160 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c: In function 'USB_disk_write':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/glue.c:168:1: warning: control reaches end of non-void function [-Wreturn-type]
+  168 | }
+      | ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c: In function 'disk_ioctl':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:216:13: warning: unused variable 'result' [-Wunused-variable]
+  216 |         int result;
+      |             ^~~~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c: In function 'disk_status':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:43:24: warning: 'stat' may be used uninitialized [-Wmaybe-uninitialized]
+   43 |                 return stat;
+      |                        ^~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:34:17: note: 'stat' was declared here
+   34 |         DSTATUS stat;
+      |                 ^~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c: In function 'disk_read':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:126:24: warning: 'res' may be used uninitialized [-Wmaybe-uninitialized]
+  126 |                 return res;
+      |                        ^~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:115:17: note: 'res' was declared here
+  115 |         DRESULT res;
+      |                 ^~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c: In function 'disk_write':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:177:24: warning: 'res' may be used uninitialized [-Wmaybe-uninitialized]
+  177 |                 return res;
+      |                        ^~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:166:17: note: 'res' was declared here
+  166 |         DRESULT res;
+      |                 ^~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c: In function 'disk_ioctl':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:223:24: warning: 'res' may be used uninitialized [-Wmaybe-uninitialized]
+  223 |                 return res;
+      |                        ^~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/diskio.c:215:17: note: 'res' was declared here
+  215 |         DRESULT res;
+      |                 ^~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c: In function 'SD_CMD0':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c:174:11: warning: implicit declaration of function 'crc7' [-Wimplicit-function-declaration]
+  174 |     crc = crc7(0, szCmd, 5);
+      |           ^~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c: In function 'SD_CMD9':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c:548:12: warning: 'nCopyLen' may be used uninitialized [-Wmaybe-uninitialized]
+  548 |         if (nCopyLen > 16)
+      |            ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c:547:13: note: 'nCopyLen' was declared here
+  547 |         int nCopyLen, x;
+      |             ^~~~~~~~
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c: In function 'SD_CMD10':
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c:603:12: warning: 'nCopyLen' may be used uninitialized [-Wmaybe-uninitialized]
+  603 |         if (nCopyLen > 16)
+      |            ^
+D:/dev_2025/a3sk_revB/A3CZ135BB18AE7S-cd-rom-25.1/Demonstrations/sdcard_filesystem/software/nios_app/terasic_sdcard/sd_protocol.c:602:13: note: 'nCopyLen' was declared here
+  602 |         int nCopyLen, x;
+      |             ^~~~~~~~
+[ 98%] Linking C executable nios_app.elf
+[ 98%] Built target nios_app.elf
+[ 99%] Reporting memory available for stack + heap in nios_app.elf.
+[ 98%] Creating intel_onchip_memory.hex.
+[100%] Creating nios_app.elf.objdump.
+[100%] Built target create-objdump
+[100%] Built target create-hex
+nios_app.elf
+ * 147.04 KB - Program size (code + initialized data).
+ * 346.73 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+
+16:33:58 Build Finished. 0 errors, 20 warnings. (took 1m:38s.693ms)
+
