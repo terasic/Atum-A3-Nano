@@ -17,5 +17,5 @@ Note :  The photos placed in the SD Card must be BMP files with a resolution of 
 - **Development Kit**: Atum A3 Nano
 - **Device Part**: A3CZ135BB18AE7S
 - **Category**: Video, HDMI, Storage, SD Card, Nios V, Demonstration
-- **URL**: https://github.com/terasic/Atum-A3-Nano/tree/rel/25.1/pricture_viewer_1080p
+- **URL**: https://github.com/terasic/Atum-A3-Nano/tree/rel/25.1/picture_viewer_1080p
 - **Design Package**: Atum_A3_Nano_picture_viewer_1080p.zip
