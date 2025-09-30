@@ -1,0 +1,1778 @@
+<?xml version="1.0" ?>
+<!--Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.-->
+<ipxact:component xmlns:altera="http://www.altera.com/XMLSchema/IPXact2014/extensions" xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014">
+  <ipxact:vendor>Intel Corporation</ipxact:vendor>
+  <ipxact:library>nios_system_intel_vvp_cvo_0</ipxact:library>
+  <ipxact:name>intel_vvp_cvo_0</ipxact:name>
+  <ipxact:version>24.4.0</ipxact:version>
+  <ipxact:busInterfaces>
+    <ipxact:busInterface>
+      <ipxact:name>axi4s_vid_in</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="axi4stream" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4stream" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tdata</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_vid_in_tdata</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tvalid</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_vid_in_tvalid</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tready</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_vid_in_tready</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tlast</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_vid_in_tlast</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tuser</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_vid_in_tuser</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>Associated clock</ipxact:displayName>
+          <ipxact:value>vid_clock</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="associatedReset" type="string">
+          <ipxact:name>associatedReset</ipxact:name>
+          <ipxact:displayName>Associated reset</ipxact:displayName>
+          <ipxact:value>vid_reset</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+      <ipxact:vendorExtensions>
+        <altera:altera_assignments>
+          <ipxact:parameters>
+            <ipxact:parameter parameterId="intel_vvp_st_format.INTF_TYPE" type="string">
+              <ipxact:name>intel_vvp_st_format.INTF_TYPE</ipxact:name>
+              <ipxact:value>vvp_ccd</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_vvp_st_format.ccd.BITS_PER_SAMPLE" type="string">
+              <ipxact:name>intel_vvp_st_format.ccd.BITS_PER_SAMPLE</ipxact:name>
+              <ipxact:value>8</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_vvp_st_format.ccd.NUMBER_OF_COLOR_PLANES" type="string">
+              <ipxact:name>intel_vvp_st_format.ccd.NUMBER_OF_COLOR_PLANES</ipxact:name>
+              <ipxact:value>3</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_vvp_st_format.ccd.PIXELS_IN_PARALLEL" type="string">
+              <ipxact:name>intel_vvp_st_format.ccd.PIXELS_IN_PARALLEL</ipxact:name>
+              <ipxact:value>1</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_vvp_st_format.ccd.version" type="string">
+              <ipxact:name>intel_vvp_st_format.ccd.version</ipxact:name>
+              <ipxact:value>1.0</ipxact:value>
+            </ipxact:parameter>
+          </ipxact:parameters>
+        </altera:altera_assignments>
+      </ipxact:vendorExtensions>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>axi4s_fr_vid_out</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="axi4stream" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="axi4stream" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tdata</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_fr_vid_out_tdata</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tvalid</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_fr_vid_out_tvalid</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tready</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_fr_vid_out_tready</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tlast</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_fr_vid_out_tlast</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>tuser</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>axi4s_fr_vid_out_tuser</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:master></ipxact:master>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>Associated clock</ipxact:displayName>
+          <ipxact:value>fr_clock</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="associatedReset" type="string">
+          <ipxact:name>associatedReset</ipxact:name>
+          <ipxact:displayName>Associated reset</ipxact:displayName>
+          <ipxact:value>fr_reset</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+      <ipxact:vendorExtensions>
+        <altera:altera_assignments>
+          <ipxact:parameters>
+            <ipxact:parameter parameterId="intel_cvg_fr_format.BITS_PER_SAMPLE" type="string">
+              <ipxact:name>intel_cvg_fr_format.BITS_PER_SAMPLE</ipxact:name>
+              <ipxact:value>8</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_cvg_fr_format.INTF_TYPE" type="string">
+              <ipxact:name>intel_cvg_fr_format.INTF_TYPE</ipxact:name>
+              <ipxact:value>fr_handshake</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_cvg_fr_format.NUMBER_OF_COLOR_PLANES" type="string">
+              <ipxact:name>intel_cvg_fr_format.NUMBER_OF_COLOR_PLANES</ipxact:name>
+              <ipxact:value>3</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_cvg_fr_format.PIXELS_IN_PARALLEL" type="string">
+              <ipxact:name>intel_cvg_fr_format.PIXELS_IN_PARALLEL</ipxact:name>
+              <ipxact:value>1</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_cvg_fr_format.PLANES_IN_SEQUENCE" type="string">
+              <ipxact:name>intel_cvg_fr_format.PLANES_IN_SEQUENCE</ipxact:name>
+              <ipxact:value>0</ipxact:value>
+            </ipxact:parameter>
+            <ipxact:parameter parameterId="intel_cvg_fr_format.version" type="string">
+              <ipxact:name>intel_cvg_fr_format.version</ipxact:name>
+              <ipxact:value>1.0</ipxact:value>
+            </ipxact:parameter>
+          </ipxact:parameters>
+        </altera:altera_assignments>
+      </ipxact:vendorExtensions>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>vid_status</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>vid_locked</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>vid_status_vid_locked</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>vid_is_full</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>vid_status_vid_is_full</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>vid_stall_error</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>vid_status_vid_stall_error</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>vid_size_mismatch</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>vid_status_vid_size_mismatch</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>associatedClock</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="associatedReset" type="string">
+          <ipxact:name>associatedReset</ipxact:name>
+          <ipxact:displayName>associatedReset</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="prSafe" type="bit">
+          <ipxact:name>prSafe</ipxact:name>
+          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+      <ipxact:vendorExtensions>
+        <altera:altera_assignments>
+          <ipxact:parameters>
+            <ipxact:parameter parameterId="ui.blockdiagram.direction" type="string">
+              <ipxact:name>ui.blockdiagram.direction</ipxact:name>
+              <ipxact:value>output</ipxact:value>
+            </ipxact:parameter>
+          </ipxact:parameters>
+        </altera:altera_assignments>
+      </ipxact:vendorExtensions>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>frame_start</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="conduit" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>conduit</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>frame_start_conduit</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>associatedClock</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="associatedReset" type="string">
+          <ipxact:name>associatedReset</ipxact:name>
+          <ipxact:displayName>associatedReset</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="prSafe" type="bit">
+          <ipxact:name>prSafe</ipxact:name>
+          <ipxact:displayName>Partial Reconfiguration Safe</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>fr_clock</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>clk</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>fr_clock_clk</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="clockRate" type="longint">
+          <ipxact:name>clockRate</ipxact:name>
+          <ipxact:displayName>Clock rate</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="externallyDriven" type="bit">
+          <ipxact:name>externallyDriven</ipxact:name>
+          <ipxact:displayName>Externally driven</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="ptfSchematicName" type="string">
+          <ipxact:name>ptfSchematicName</ipxact:name>
+          <ipxact:displayName>PTF schematic name</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>fr_reset</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>reset</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>fr_reset_reset</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>Associated clock</ipxact:displayName>
+          <ipxact:value>fr_clock</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="synchronousEdges" type="string">
+          <ipxact:name>synchronousEdges</ipxact:name>
+          <ipxact:displayName>Synchronous edges</ipxact:displayName>
+          <ipxact:value>BOTH</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>vid_clock</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="clock" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="clock" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>clk</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>vid_clock_clk</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="clockRate" type="longint">
+          <ipxact:name>clockRate</ipxact:name>
+          <ipxact:displayName>Clock rate</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="externallyDriven" type="bit">
+          <ipxact:name>externallyDriven</ipxact:name>
+          <ipxact:displayName>Externally driven</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="ptfSchematicName" type="string">
+          <ipxact:name>ptfSchematicName</ipxact:name>
+          <ipxact:displayName>PTF schematic name</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+    <ipxact:busInterface>
+      <ipxact:name>vid_reset</ipxact:name>
+      <ipxact:busType vendor="intel" library="intel" name="reset" version="25.1"></ipxact:busType>
+      <ipxact:abstractionTypes>
+        <ipxact:abstractionType>
+          <ipxact:abstractionRef vendor="intel" library="intel" name="reset" version="25.1"></ipxact:abstractionRef>
+          <ipxact:portMaps>
+            <ipxact:portMap>
+              <ipxact:logicalPort>
+                <ipxact:name>reset</ipxact:name>
+              </ipxact:logicalPort>
+              <ipxact:physicalPort>
+                <ipxact:name>vid_reset_reset</ipxact:name>
+              </ipxact:physicalPort>
+            </ipxact:portMap>
+          </ipxact:portMaps>
+        </ipxact:abstractionType>
+      </ipxact:abstractionTypes>
+      <ipxact:slave></ipxact:slave>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="associatedClock" type="string">
+          <ipxact:name>associatedClock</ipxact:name>
+          <ipxact:displayName>Associated clock</ipxact:displayName>
+          <ipxact:value>vid_clock</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="synchronousEdges" type="string">
+          <ipxact:name>synchronousEdges</ipxact:name>
+          <ipxact:displayName>Synchronous edges</ipxact:displayName>
+          <ipxact:value>BOTH</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </ipxact:busInterface>
+  </ipxact:busInterfaces>
+  <ipxact:model>
+    <ipxact:views>
+      <ipxact:view>
+        <ipxact:name>QUARTUS_SYNTH</ipxact:name>
+        <ipxact:envIdentifier>:quartus.altera.com:</ipxact:envIdentifier>
+        <ipxact:componentInstantiationRef>QUARTUS_SYNTH</ipxact:componentInstantiationRef>
+      </ipxact:view>
+    </ipxact:views>
+    <ipxact:instantiations>
+      <ipxact:componentInstantiation>
+        <ipxact:name>QUARTUS_SYNTH</ipxact:name>
+        <ipxact:moduleName>intel_vvp_cvo</ipxact:moduleName>
+        <ipxact:fileSetRef>
+          <ipxact:localName>QUARTUS_SYNTH</ipxact:localName>
+        </ipxact:fileSetRef>
+        <ipxact:parameters></ipxact:parameters>
+      </ipxact:componentInstantiation>
+    </ipxact:instantiations>
+    <ipxact:ports>
+      <ipxact:port>
+        <ipxact:name>axi4s_vid_in_tdata</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>23</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_vid_in_tvalid</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_vid_in_tready</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_vid_in_tlast</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_vid_in_tuser</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>2</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_fr_vid_out_tdata</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>31</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_fr_vid_out_tvalid</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_fr_vid_out_tready</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_fr_vid_out_tlast</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>axi4s_fr_vid_out_tuser</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors>
+            <ipxact:vector>
+              <ipxact:left>0</ipxact:left>
+              <ipxact:right>3</ipxact:right>
+            </ipxact:vector>
+          </ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC_VECTOR</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>vid_status_vid_locked</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>vid_status_vid_is_full</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>vid_status_vid_stall_error</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>vid_status_vid_size_mismatch</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>out</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>frame_start_conduit</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>fr_clock_clk</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>fr_reset_reset</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>vid_clock_clk</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+      <ipxact:port>
+        <ipxact:name>vid_reset_reset</ipxact:name>
+        <ipxact:wire>
+          <ipxact:direction>in</ipxact:direction>
+          <ipxact:vectors></ipxact:vectors>
+          <ipxact:wireTypeDefs>
+            <ipxact:wireTypeDef>
+              <ipxact:typeName>STD_LOGIC</ipxact:typeName>
+              <ipxact:viewRef>QUARTUS_SYNTH</ipxact:viewRef>
+            </ipxact:wireTypeDef>
+          </ipxact:wireTypeDefs>
+        </ipxact:wire>
+      </ipxact:port>
+    </ipxact:ports>
+  </ipxact:model>
+  <ipxact:vendorExtensions>
+    <altera:entity_info>
+      <ipxact:vendor>Intel Corporation</ipxact:vendor>
+      <ipxact:library>nios_system_intel_vvp_cvo_0</ipxact:library>
+      <ipxact:name>intel_vvp_cvo</ipxact:name>
+      <ipxact:version>24.4.0</ipxact:version>
+    </altera:entity_info>
+    <altera:altera_module_parameters>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="BPS" type="int">
+          <ipxact:name>BPS</ipxact:name>
+          <ipxact:displayName>Bits per color sample</ipxact:displayName>
+          <ipxact:value>8</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="NUMBER_OF_COLOR_PLANES" type="int">
+          <ipxact:name>NUMBER_OF_COLOR_PLANES</ipxact:name>
+          <ipxact:displayName>Number of color planes</ipxact:displayName>
+          <ipxact:value>3</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="PIXELS_IN_PARALLEL" type="int">
+          <ipxact:name>PIXELS_IN_PARALLEL</ipxact:name>
+          <ipxact:displayName>Number of pixels in parallel</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="RUNTIME_CONTROL" type="int">
+          <ipxact:name>RUNTIME_CONTROL</ipxact:name>
+          <ipxact:displayName>Memory mapped control interface</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="SEPARATE_SLAVE_CLOCK" type="int">
+          <ipxact:name>SEPARATE_SLAVE_CLOCK</ipxact:name>
+          <ipxact:displayName>Separate clock for control interface</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="SLAVE_PROTOCOL" type="string">
+          <ipxact:name>SLAVE_PROTOCOL</ipxact:name>
+          <ipxact:displayName>Control interface protocol</ipxact:displayName>
+          <ipxact:value>Avalon</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_CVO_DEFAULT_BLACK_0" type="int">
+          <ipxact:name>C_CVO_DEFAULT_BLACK_0</ipxact:name>
+          <ipxact:displayName>Default black for merge, color plane 0</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_CVO_DEFAULT_BLACK_1" type="int">
+          <ipxact:name>C_CVO_DEFAULT_BLACK_1</ipxact:name>
+          <ipxact:displayName>Default black for merge, color plane 1</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_CVO_DEFAULT_BLACK_2" type="int">
+          <ipxact:name>C_CVO_DEFAULT_BLACK_2</ipxact:name>
+          <ipxact:displayName>Default black for merge, color plane 2</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_CVO_DEFAULT_BLACK_3" type="int">
+          <ipxact:name>C_CVO_DEFAULT_BLACK_3</ipxact:name>
+          <ipxact:displayName>Default black for merge, color plane 3</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="VIRTUAL_FR_HAS_TREADY" type="int">
+          <ipxact:name>VIRTUAL_FR_HAS_TREADY</ipxact:name>
+          <ipxact:displayName>AXI4-S FR interface TREADY</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="CPU_CLK_FREQ_HZ" type="int">
+          <ipxact:name>CPU_CLK_FREQ_HZ</ipxact:name>
+          <ipxact:displayName>Frequency of CPU clock</ipxact:displayName>
+          <ipxact:value>100000000</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="ALIGNED_ONLY" type="int">
+          <ipxact:name>ALIGNED_ONLY</ipxact:name>
+          <ipxact:displayName>Timing word alignment</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_BUILD_HARD_FRAME_LOCK" type="int">
+          <ipxact:name>C_BUILD_HARD_FRAME_LOCK</ipxact:name>
+          <ipxact:displayName>Hard frame lock support</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_BUILD_SOFT_FRAME_LOCK" type="int">
+          <ipxact:name>C_BUILD_SOFT_FRAME_LOCK</ipxact:name>
+          <ipxact:displayName>Soft frame lock support</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_BUILD_VRR" type="int">
+          <ipxact:name>C_BUILD_VRR</ipxact:name>
+          <ipxact:displayName>Variable refresh rate support</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_HSIZE" type="int">
+          <ipxact:name>C_HSIZE</ipxact:name>
+          <ipxact:displayName>Horizontal counter bits</ipxact:displayName>
+          <ipxact:value>14</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_VSIZE" type="int">
+          <ipxact:name>C_VSIZE</ipxact:name>
+          <ipxact:displayName>Vertical counter bits</ipxact:displayName>
+          <ipxact:value>14</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_NUM_PULSES" type="int">
+          <ipxact:name>C_NUM_PULSES</ipxact:name>
+          <ipxact:displayName>Number of pulses</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="VIRTUAL_INTERNAL_VTIMING" type="int">
+          <ipxact:name>VIRTUAL_INTERNAL_VTIMING</ipxact:name>
+          <ipxact:displayName>Internal timing generator</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_VID_IS_ASYNC" type="int">
+          <ipxact:name>C_VID_IS_ASYNC</ipxact:name>
+          <ipxact:displayName>Async video input</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_VID_FIFO_DEPTH" type="int">
+          <ipxact:name>C_VID_FIFO_DEPTH</ipxact:name>
+          <ipxact:displayName>Depth of video input fifos</ipxact:displayName>
+          <ipxact:value>4096</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_FALL_BACK_INPUT_EN" type="int">
+          <ipxact:name>C_FALL_BACK_INPUT_EN</ipxact:name>
+          <ipxact:displayName>Test pattern input</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TPG_IS_ASYNC" type="int">
+          <ipxact:name>C_TPG_IS_ASYNC</ipxact:name>
+          <ipxact:displayName>Async test pattern input</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TPG_FIFO_DEPTH" type="int">
+          <ipxact:name>C_TPG_FIFO_DEPTH</ipxact:name>
+          <ipxact:displayName>Depth of tpg input fifos</ipxact:displayName>
+          <ipxact:value>1024</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_DIMENSIONS" type="int">
+          <ipxact:name>C_TIM_DIMENSIONS</ipxact:name>
+          <ipxact:displayName>Timing dimensions</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_VID_DIMENSIONS" type="int">
+          <ipxact:name>C_VID_DIMENSIONS</ipxact:name>
+          <ipxact:displayName>Video dimensions</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_VID_DEBUG" type="int">
+          <ipxact:name>C_VID_DEBUG</ipxact:name>
+          <ipxact:displayName>Video merge status</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TPG_DIMENSIONS" type="int">
+          <ipxact:name>C_TPG_DIMENSIONS</ipxact:name>
+          <ipxact:displayName>Test pattern dimensions</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TPG_DEBUG" type="int">
+          <ipxact:name>C_TPG_DEBUG</ipxact:name>
+          <ipxact:displayName>Test pattern merge status</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_OUT_IS_BLANK" type="int">
+          <ipxact:name>C_DEFAULT_OUT_IS_BLANK</ipxact:name>
+          <ipxact:displayName>Blanking type</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_BLACK_0" type="int">
+          <ipxact:name>C_DEFAULT_BLACK_0</ipxact:name>
+          <ipxact:displayName>Black value, color plane 0</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_BLACK_1" type="int">
+          <ipxact:name>C_DEFAULT_BLACK_1</ipxact:name>
+          <ipxact:displayName>Black value, color plane 1</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_BLACK_2" type="int">
+          <ipxact:name>C_DEFAULT_BLACK_2</ipxact:name>
+          <ipxact:displayName>Black value, color plane 2</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_BLACK_3" type="int">
+          <ipxact:name>C_DEFAULT_BLACK_3</ipxact:name>
+          <ipxact:displayName>Black value, color plane 3</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="VIRTUAL_LOCK_MODE" type="int">
+          <ipxact:name>VIRTUAL_LOCK_MODE</ipxact:name>
+          <ipxact:displayName>Frame lock mode</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_ENABLE_SOFT_LOCK" type="int">
+          <ipxact:name>C_DEFAULT_ENABLE_SOFT_LOCK</ipxact:name>
+          <ipxact:displayName>Soft frame lock</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_ENABLE_VRR_LINEMODE" type="int">
+          <ipxact:name>C_DEFAULT_ENABLE_VRR_LINEMODE</ipxact:name>
+          <ipxact:displayName>VRR line mode</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_FRAME_START_PULSE" type="int">
+          <ipxact:name>C_DEFAULT_FRAME_START_PULSE</ipxact:name>
+          <ipxact:displayName>Frame start signal type</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_FRAME_START_MAX_JITTER" type="int">
+          <ipxact:name>C_DEFAULT_FRAME_START_MAX_JITTER</ipxact:name>
+          <ipxact:displayName>Frame start max allowed jitter</ipxact:displayName>
+          <ipxact:value>8</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_FRAME_ADJ_IGNORE_LINES" type="int">
+          <ipxact:name>C_DEFAULT_FRAME_ADJ_IGNORE_LINES</ipxact:name>
+          <ipxact:displayName>Soft lock frame start ignore</ipxact:displayName>
+          <ipxact:value>1</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_DEFAULT_FRAME_ADJ_WINDOW_LINES" type="int">
+          <ipxact:name>C_DEFAULT_FRAME_ADJ_WINDOW_LINES</ipxact:name>
+          <ipxact:displayName>Soft lock frame start adjust</ipxact:displayName>
+          <ipxact:value>3</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="VID_LIST" type="int">
+          <ipxact:name>VID_LIST</ipxact:name>
+          <ipxact:displayName>Video timing configuration values</ipxact:displayName>
+          <ipxact:value>2</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_HRESET" type="int">
+          <ipxact:name>C_TIM_HRESET</ipxact:name>
+          <ipxact:displayName>Default value for HRESET</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_VRESET" type="int">
+          <ipxact:name>C_TIM_VRESET</ipxact:name>
+          <ipxact:displayName>Default value for VRESET</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_HTOTAL" type="int">
+          <ipxact:name>C_TIM_HTOTAL</ipxact:name>
+          <ipxact:displayName>Default value for HTOTAL</ipxact:displayName>
+          <ipxact:value>2200</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_VTOTAL" type="int">
+          <ipxact:name>C_TIM_VTOTAL</ipxact:name>
+          <ipxact:displayName>Default value for VTOTAL</ipxact:displayName>
+          <ipxact:value>1125</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_HB_END" type="int">
+          <ipxact:name>C_TIM_HB_END</ipxact:name>
+          <ipxact:displayName>Default value for HB_END</ipxact:displayName>
+          <ipxact:value>280</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V1B_START" type="int">
+          <ipxact:name>C_TIM_V1B_START</ipxact:name>
+          <ipxact:displayName>Default value for V1B_START</ipxact:displayName>
+          <ipxact:value>1121</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V1B_END" type="int">
+          <ipxact:name>C_TIM_V1B_END</ipxact:name>
+          <ipxact:displayName>Default value for V1B_END</ipxact:displayName>
+          <ipxact:value>41</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V2B_START" type="int">
+          <ipxact:name>C_TIM_V2B_START</ipxact:name>
+          <ipxact:displayName>Default value for V2B_START</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V2B_END" type="int">
+          <ipxact:name>C_TIM_V2B_END</ipxact:name>
+          <ipxact:displayName>Default value for V2B_END</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_F1_START" type="int">
+          <ipxact:name>C_TIM_F1_START</ipxact:name>
+          <ipxact:displayName>Default Value for F1_START</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_F2_START" type="int">
+          <ipxact:name>C_TIM_F2_START</ipxact:name>
+          <ipxact:displayName>Default Value for F2_START</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_HS_START" type="int">
+          <ipxact:name>C_TIM_HS_START</ipxact:name>
+          <ipxact:displayName>Default Value for HS_START</ipxact:displayName>
+          <ipxact:value>88</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_HS_END" type="int">
+          <ipxact:name>C_TIM_HS_END</ipxact:name>
+          <ipxact:displayName>Default Value for HS_END</ipxact:displayName>
+          <ipxact:value>132</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V1S_VSTART" type="int">
+          <ipxact:name>C_TIM_V1S_VSTART</ipxact:name>
+          <ipxact:displayName>Default Value for V1S_VSTART</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V1S_HSTART" type="int">
+          <ipxact:name>C_TIM_V1S_HSTART</ipxact:name>
+          <ipxact:displayName>Default Value for V1S_HSTART</ipxact:displayName>
+          <ipxact:value>88</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V1S_VEND" type="int">
+          <ipxact:name>C_TIM_V1S_VEND</ipxact:name>
+          <ipxact:displayName>Default Value for V1S_VEND</ipxact:displayName>
+          <ipxact:value>5</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V1S_HEND" type="int">
+          <ipxact:name>C_TIM_V1S_HEND</ipxact:name>
+          <ipxact:displayName>Default Value for V1S_HEND</ipxact:displayName>
+          <ipxact:value>88</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V2S_VSTART" type="int">
+          <ipxact:name>C_TIM_V2S_VSTART</ipxact:name>
+          <ipxact:displayName>Default Value for V2S_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V2S_HSTART" type="int">
+          <ipxact:name>C_TIM_V2S_HSTART</ipxact:name>
+          <ipxact:displayName>Default Value for V2S_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V2S_VEND" type="int">
+          <ipxact:name>C_TIM_V2S_VEND</ipxact:name>
+          <ipxact:displayName>Default Value for V2S_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_V2S_HEND" type="int">
+          <ipxact:name>C_TIM_V2S_HEND</ipxact:name>
+          <ipxact:displayName>Default Value for V2S_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE0_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE0_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE0_VSTART</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE0_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE0_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE0_HSTART</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE0_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE0_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE0_VEND</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE0_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE0_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE0_HEND</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE1_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE1_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE1_VSTART</ipxact:displayName>
+          <ipxact:value>4</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE1_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE1_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE1_HSTART</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE1_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE1_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE1_VEND</ipxact:displayName>
+          <ipxact:value>4</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE1_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE1_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE1_HEND</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE2_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE2_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE2_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE2_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE2_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE2_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE2_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE2_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE2_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE2_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE2_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE2_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE3_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE3_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE3_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE3_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE3_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE3_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE3_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE3_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE3_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE3_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE3_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE3_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE4_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE4_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE4_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE4_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE4_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE4_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE4_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE4_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE4_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE4_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE4_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE4_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE5_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE5_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE5_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE5_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE5_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE5_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE5_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE5_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE5_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE5_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE5_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE5_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE6_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE6_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE6_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE6_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE6_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE6_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE6_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE6_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE6_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE6_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE6_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE6_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE7_VSTART" type="int">
+          <ipxact:name>C_TIM_PULSE7_VSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE7_VSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE7_HSTART" type="int">
+          <ipxact:name>C_TIM_PULSE7_HSTART</ipxact:name>
+          <ipxact:displayName>Default value for PULSE7_HSTART</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE7_VEND" type="int">
+          <ipxact:name>C_TIM_PULSE7_VEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE7_VEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="C_TIM_PULSE7_HEND" type="int">
+          <ipxact:name>C_TIM_PULSE7_HEND</ipxact:name>
+          <ipxact:displayName>Default value for PULSE7_HEND</ipxact:displayName>
+          <ipxact:value>9999</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="AUTO_DEVICE_FAMILY" type="string">
+          <ipxact:name>AUTO_DEVICE_FAMILY</ipxact:name>
+          <ipxact:displayName>Auto DEVICE_FAMILY</ipxact:displayName>
+          <ipxact:value>Agilex 3</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="AUTO_DEVICE" type="string">
+          <ipxact:name>AUTO_DEVICE</ipxact:name>
+          <ipxact:displayName>Auto DEVICE</ipxact:displayName>
+          <ipxact:value>A3CZ135BB18AE7S</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="AUTO_DEVICE_SPEEDGRADE" type="string">
+          <ipxact:name>AUTO_DEVICE_SPEEDGRADE</ipxact:name>
+          <ipxact:displayName>Auto DEVICE_SPEEDGRADE</ipxact:displayName>
+          <ipxact:value>7</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="AUTO_BOARD" type="string">
+          <ipxact:name>AUTO_BOARD</ipxact:name>
+          <ipxact:displayName>Auto BOARD</ipxact:displayName>
+          <ipxact:value>default</ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </altera:altera_module_parameters>
+    <altera:altera_system_parameters>
+      <ipxact:parameters>
+        <ipxact:parameter parameterId="board" type="string">
+          <ipxact:name>board</ipxact:name>
+          <ipxact:displayName>Board</ipxact:displayName>
+          <ipxact:value>default</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="device" type="string">
+          <ipxact:name>device</ipxact:name>
+          <ipxact:displayName>Device</ipxact:displayName>
+          <ipxact:value>A3CZ135BB18AE7S</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="deviceFamily" type="string">
+          <ipxact:name>deviceFamily</ipxact:name>
+          <ipxact:displayName>Device family</ipxact:displayName>
+          <ipxact:value>Agilex 3</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="deviceSpeedGrade" type="string">
+          <ipxact:name>deviceSpeedGrade</ipxact:name>
+          <ipxact:displayName>Device Speed Grade</ipxact:displayName>
+          <ipxact:value>7</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="generationId" type="int">
+          <ipxact:name>generationId</ipxact:name>
+          <ipxact:displayName>Generation Id</ipxact:displayName>
+          <ipxact:value>0</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="bonusData" type="string">
+          <ipxact:name>bonusData</ipxact:name>
+          <ipxact:displayName>bonusData</ipxact:displayName>
+          <ipxact:value>bonusData 
+{
+   element $system
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Agilex 3";
+         type = "String";
+      }
+   }
+   element intel_vvp_cvo_0
+   {
+   }
+}
+</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="hideFromIPCatalog" type="bit">
+          <ipxact:name>hideFromIPCatalog</ipxact:name>
+          <ipxact:displayName>Hide from IP Catalog</ipxact:displayName>
+          <ipxact:value>false</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="lockedInterfaceDefinition" type="string">
+          <ipxact:name>lockedInterfaceDefinition</ipxact:name>
+          <ipxact:displayName>lockedInterfaceDefinition</ipxact:displayName>
+          <ipxact:value>&lt;boundaryDefinition&gt;
+    &lt;interfaces&gt;
+        &lt;interface&gt;
+            &lt;name&gt;axi4s_vid_in&lt;/name&gt;
+            &lt;type&gt;axi4stream&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_vid_in_tdata&lt;/name&gt;
+                    &lt;role&gt;tdata&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;24&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_vid_in_tvalid&lt;/name&gt;
+                    &lt;role&gt;tvalid&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_vid_in_tready&lt;/name&gt;
+                    &lt;role&gt;tready&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_vid_in_tlast&lt;/name&gt;
+                    &lt;role&gt;tlast&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_vid_in_tuser&lt;/name&gt;
+                    &lt;role&gt;tuser&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;3&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_vvp_st_format.INTF_TYPE&lt;/key&gt;
+                        &lt;value&gt;vvp_ccd&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_vvp_st_format.ccd.BITS_PER_SAMPLE&lt;/key&gt;
+                        &lt;value&gt;8&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_vvp_st_format.ccd.NUMBER_OF_COLOR_PLANES&lt;/key&gt;
+                        &lt;value&gt;3&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_vvp_st_format.ccd.PIXELS_IN_PARALLEL&lt;/key&gt;
+                        &lt;value&gt;1&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_vvp_st_format.ccd.version&lt;/key&gt;
+                        &lt;value&gt;1.0&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;value&gt;vid_clock&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;value&gt;vid_reset&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;axi4s_fr_vid_out&lt;/name&gt;
+            &lt;type&gt;axi4stream&lt;/type&gt;
+            &lt;isStart&gt;true&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_fr_vid_out_tdata&lt;/name&gt;
+                    &lt;role&gt;tdata&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;32&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_fr_vid_out_tvalid&lt;/name&gt;
+                    &lt;role&gt;tvalid&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_fr_vid_out_tready&lt;/name&gt;
+                    &lt;role&gt;tready&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_fr_vid_out_tlast&lt;/name&gt;
+                    &lt;role&gt;tlast&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;axi4s_fr_vid_out_tuser&lt;/name&gt;
+                    &lt;role&gt;tuser&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;4&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC_VECTOR&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_cvg_fr_format.BITS_PER_SAMPLE&lt;/key&gt;
+                        &lt;value&gt;8&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_cvg_fr_format.INTF_TYPE&lt;/key&gt;
+                        &lt;value&gt;fr_handshake&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_cvg_fr_format.NUMBER_OF_COLOR_PLANES&lt;/key&gt;
+                        &lt;value&gt;3&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_cvg_fr_format.PIXELS_IN_PARALLEL&lt;/key&gt;
+                        &lt;value&gt;1&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_cvg_fr_format.PLANES_IN_SEQUENCE&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;intel_cvg_fr_format.version&lt;/key&gt;
+                        &lt;value&gt;1.0&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;value&gt;fr_clock&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedReset&lt;/key&gt;
+                        &lt;value&gt;fr_reset&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;vid_status&lt;/name&gt;
+            &lt;type&gt;conduit&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;vid_status_vid_locked&lt;/name&gt;
+                    &lt;role&gt;vid_locked&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;vid_status_vid_is_full&lt;/name&gt;
+                    &lt;role&gt;vid_is_full&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;vid_status_vid_stall_error&lt;/name&gt;
+                    &lt;role&gt;vid_stall_error&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+                &lt;port&gt;
+                    &lt;name&gt;vid_status_vid_size_mismatch&lt;/name&gt;
+                    &lt;role&gt;vid_size_mismatch&lt;/role&gt;
+                    &lt;direction&gt;Output&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ui.blockdiagram.direction&lt;/key&gt;
+                        &lt;value&gt;output&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/assignmentValueMap&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedReset&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;prSafe&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;frame_start&lt;/name&gt;
+            &lt;type&gt;conduit&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;frame_start_conduit&lt;/name&gt;
+                    &lt;role&gt;conduit&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedReset&lt;/key&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;prSafe&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;fr_clock&lt;/name&gt;
+            &lt;type&gt;clock&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;fr_clock_clk&lt;/name&gt;
+                    &lt;role&gt;clk&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRate&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;externallyDriven&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;fr_reset&lt;/name&gt;
+            &lt;type&gt;reset&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;fr_reset_reset&lt;/name&gt;
+                    &lt;role&gt;reset&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;value&gt;fr_clock&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;synchronousEdges&lt;/key&gt;
+                        &lt;value&gt;BOTH&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;vid_clock&lt;/name&gt;
+            &lt;type&gt;clock&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;vid_clock_clk&lt;/name&gt;
+                    &lt;role&gt;clk&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;clockRate&lt;/key&gt;
+                        &lt;value&gt;0&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;externallyDriven&lt;/key&gt;
+                        &lt;value&gt;false&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;ptfSchematicName&lt;/key&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+        &lt;interface&gt;
+            &lt;name&gt;vid_reset&lt;/name&gt;
+            &lt;type&gt;reset&lt;/type&gt;
+            &lt;isStart&gt;false&lt;/isStart&gt;
+            &lt;ports&gt;
+                &lt;port&gt;
+                    &lt;name&gt;vid_reset_reset&lt;/name&gt;
+                    &lt;role&gt;reset&lt;/role&gt;
+                    &lt;direction&gt;Input&lt;/direction&gt;
+                    &lt;width&gt;1&lt;/width&gt;
+                    &lt;lowerBound&gt;0&lt;/lowerBound&gt;
+                    &lt;vhdlType&gt;STD_LOGIC&lt;/vhdlType&gt;
+                    &lt;terminationValue&gt;0&lt;/terminationValue&gt;
+                &lt;/port&gt;
+            &lt;/ports&gt;
+            &lt;assignments&gt;
+                &lt;assignmentValueMap/&gt;
+            &lt;/assignments&gt;
+            &lt;parameters&gt;
+                &lt;parameterValueMap&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;associatedClock&lt;/key&gt;
+                        &lt;value&gt;vid_clock&lt;/value&gt;
+                    &lt;/entry&gt;
+                    &lt;entry&gt;
+                        &lt;key&gt;synchronousEdges&lt;/key&gt;
+                        &lt;value&gt;BOTH&lt;/value&gt;
+                    &lt;/entry&gt;
+                &lt;/parameterValueMap&gt;
+            &lt;/parameters&gt;
+        &lt;/interface&gt;
+    &lt;/interfaces&gt;
+&lt;/boundaryDefinition&gt;</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="systemInfos" type="string">
+          <ipxact:name>systemInfos</ipxact:name>
+          <ipxact:displayName>systemInfos</ipxact:displayName>
+          <ipxact:value>&lt;systemInfosDefinition&gt;
+    &lt;connPtSystemInfos/&gt;
+&lt;/systemInfosDefinition&gt;</ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="dflBitArray" type="string">
+          <ipxact:name>dflBitArray</ipxact:name>
+          <ipxact:displayName>dflBitArray</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+        <ipxact:parameter parameterId="cpuInfo" type="string">
+          <ipxact:name>cpuInfo</ipxact:name>
+          <ipxact:displayName>cpuInfo</ipxact:displayName>
+          <ipxact:value></ipxact:value>
+        </ipxact:parameter>
+      </ipxact:parameters>
+    </altera:altera_system_parameters>
+    <altera:altera_interface_boundary>
+      <altera:interface_mapping altera:name="axi4s_fr_vid_out" altera:internal="intel_vvp_cvo_0.axi4s_fr_vid_out" altera:type="axi4stream" altera:dir="start">
+        <altera:port_mapping altera:name="axi4s_fr_vid_out_tdata" altera:internal="axi4s_fr_vid_out_tdata"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_fr_vid_out_tlast" altera:internal="axi4s_fr_vid_out_tlast"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_fr_vid_out_tready" altera:internal="axi4s_fr_vid_out_tready"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_fr_vid_out_tuser" altera:internal="axi4s_fr_vid_out_tuser"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_fr_vid_out_tvalid" altera:internal="axi4s_fr_vid_out_tvalid"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="axi4s_vid_in" altera:internal="intel_vvp_cvo_0.axi4s_vid_in" altera:type="axi4stream" altera:dir="end">
+        <altera:port_mapping altera:name="axi4s_vid_in_tdata" altera:internal="axi4s_vid_in_tdata"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_vid_in_tlast" altera:internal="axi4s_vid_in_tlast"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_vid_in_tready" altera:internal="axi4s_vid_in_tready"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_vid_in_tuser" altera:internal="axi4s_vid_in_tuser"></altera:port_mapping>
+        <altera:port_mapping altera:name="axi4s_vid_in_tvalid" altera:internal="axi4s_vid_in_tvalid"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="fr_clock" altera:internal="intel_vvp_cvo_0.fr_clock" altera:type="clock" altera:dir="end">
+        <altera:port_mapping altera:name="fr_clock_clk" altera:internal="fr_clock_clk"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="fr_reset" altera:internal="intel_vvp_cvo_0.fr_reset" altera:type="reset" altera:dir="end">
+        <altera:port_mapping altera:name="fr_reset_reset" altera:internal="fr_reset_reset"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="frame_start" altera:internal="intel_vvp_cvo_0.frame_start" altera:type="conduit" altera:dir="end">
+        <altera:port_mapping altera:name="frame_start_conduit" altera:internal="frame_start_conduit"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="pulse0" altera:internal="intel_vvp_cvo_0.pulse0"></altera:interface_mapping>
+      <altera:interface_mapping altera:name="vid_clock" altera:internal="intel_vvp_cvo_0.vid_clock" altera:type="clock" altera:dir="end">
+        <altera:port_mapping altera:name="vid_clock_clk" altera:internal="vid_clock_clk"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="vid_reset" altera:internal="intel_vvp_cvo_0.vid_reset" altera:type="reset" altera:dir="end">
+        <altera:port_mapping altera:name="vid_reset_reset" altera:internal="vid_reset_reset"></altera:port_mapping>
+      </altera:interface_mapping>
+      <altera:interface_mapping altera:name="vid_status" altera:internal="intel_vvp_cvo_0.vid_status" altera:type="conduit" altera:dir="end">
+        <altera:port_mapping altera:name="vid_status_vid_is_full" altera:internal="vid_status_vid_is_full"></altera:port_mapping>
+        <altera:port_mapping altera:name="vid_status_vid_locked" altera:internal="vid_status_vid_locked"></altera:port_mapping>
+        <altera:port_mapping altera:name="vid_status_vid_size_mismatch" altera:internal="vid_status_vid_size_mismatch"></altera:port_mapping>
+        <altera:port_mapping altera:name="vid_status_vid_stall_error" altera:internal="vid_status_vid_stall_error"></altera:port_mapping>
+      </altera:interface_mapping>
+    </altera:altera_interface_boundary>
+    <altera:altera_has_warnings>false</altera:altera_has_warnings>
+    <altera:altera_has_errors>false</altera:altera_has_errors>
+  </ipxact:vendorExtensions>
+</ipxact:component>

@@ -1,0 +1,120 @@
+/*
+ * Bitmap.cpp
+ *
+ *  Created on: 2025年6月7日
+ *      Author: User
+ */
+
+
+#include "ff.h"
+#include "diskio.h"
+#include "Bitmap_File.h"
+
+bool BMP_IsSupported(const char *pFilenamme, const int width, const int height){
+	bool bSuccess = false;
+    FRESULT fr;
+    FIL fil;
+    int nFileSize;
+    BITMAP_FILE_HEADER FileHeader;
+    BITMAP_INFO_HEADER BitmapHeader;
+    UINT ReadLen;
+
+
+	fr = f_open(&fil, pFilenamme, FA_OPEN_EXISTING | FA_READ);
+
+	if (fr != FR_OK){
+		printf("failed to open file - %s\r\n", pFilenamme);
+	}else{
+
+		nFileSize = f_size(&fil);
+
+		if (nFileSize >= sizeof(BITMAP_FILE_HEADER)+sizeof(BITMAP_INFO_HEADER)){
+			fr = f_read(&fil, (void *)&FileHeader, sizeof(FileHeader), &ReadLen);
+			if ((fr == FR_OK) && (ReadLen == sizeof(FileHeader)) && FileHeader.bfType == 0x4d42){
+				// this is bitmap header
+				fr = f_read(&fil, (void *)&BitmapHeader, sizeof(BitmapHeader), &ReadLen);
+				if ((fr == FR_OK) && (ReadLen == sizeof(BitmapHeader)) && (BitmapHeader.biClrUsed == 0) &&
+						(BitmapHeader.biWidth == width) && (BitmapHeader.biHeight == height) &&
+						(BitmapHeader.biSizeImage == width*height*3)){
+					// supported format and size
+					bSuccess = true;
+				}
+			}
+
+		}
+
+    	/* Close the file */
+    	f_close(&fil);
+	}
+	return bSuccess;
+
+}
+
+bool BMP_find_image_file (char szFileList[][FF_MAX_LFN], int nBufCnt, int *pFileCnt, const int nWidth, const int nHeight)
+{
+    FRESULT fr;     /* Return value */
+    DIR dj;         /* Directory object */
+    FILINFO fno;    /* File information */
+    int nFileCnt = 0;
+
+
+   	fr = f_findfirst(&dj, &fno, "", "*.bmp"); /* Start to search for photo files */
+
+   	while (fr == FR_OK && fno.fname[0]) {         /* Repeat while an item is found */
+    		strcpy(szFileList[nFileCnt], fno.fname);
+    		//printf("%s\n", fno.fname);                /* Print the object name */
+    		fr = f_findnext(&dj, &fno);               /* Search for next item */
+
+    		//
+    		if (BMP_IsSupported(szFileList[nFileCnt], nWidth, nHeight) && (nFileCnt < nBufCnt)){
+    			nFileCnt++;
+    			*pFileCnt = nFileCnt;
+    		}
+   	}
+   	f_closedir(&dj);
+    return nFileCnt;
+}
+
+bool BMP_draw(char *pFilename, void *pMem, const int nWidth, const int nHeight){
+	bool bSuccess = false;
+    FRESULT fr;
+    FIL fil;
+    int nFileSize, nImageSize;
+    BITMAP_FILE_HEADER FileHeader;
+    BITMAP_INFO_HEADER BitmapHeader;
+    UINT ReadLen;
+
+    nImageSize = nWidth*nHeight*3;
+
+	fr = f_open(&fil, pFilename, FA_OPEN_EXISTING | FA_READ);
+
+	if (fr != FR_OK){
+		printf("failed to open file - %s\r\n", pFilename);
+	}else{
+		bSuccess = true;
+
+		nFileSize = f_size(&fil);
+
+		if (nFileSize >= sizeof(BITMAP_FILE_HEADER)+sizeof(BITMAP_INFO_HEADER)){
+			fr = f_read(&fil, (void *)&FileHeader, sizeof(FileHeader), &ReadLen);
+			if ((fr == FR_OK) && (ReadLen == sizeof(FileHeader)) && FileHeader.bfType == 0x4d42){
+				// this is bitmap header
+				fr = f_read(&fil, (void *)&BitmapHeader, sizeof(BitmapHeader), &ReadLen);
+				if ((fr == FR_OK) && (ReadLen == sizeof(BitmapHeader)) && (BitmapHeader.biClrUsed == 0) &&
+						(BitmapHeader.biWidth == nWidth) && (BitmapHeader.biHeight == nHeight) &&
+						(BitmapHeader.biSizeImage == nImageSize)){
+					// supported format and size
+					fr = f_read (&fil, pMem, nImageSize, &ReadLen);			/* Read data from the file */
+					if ((fr == FR_OK) && (ReadLen == nImageSize)){
+						bSuccess = true;
+					}
+				}
+			}
+
+		}
+
+    	/* Close the file */
+    	f_close(&fil);
+	}
+	return bSuccess;
+}

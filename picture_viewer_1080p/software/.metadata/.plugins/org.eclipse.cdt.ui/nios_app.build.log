@@ -1,0 +1,18 @@
+12:57:10 **** Incremental Build of configuration Debug for project nios_app ****
+"C:\\altera_pro\\25.1\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 84%] Built target hal2_bsp
+[ 85%] Building CXX object CMakeFiles/nios_app.elf.dir/main.cpp.obj
+[ 86%] Linking CXX executable nios_app.elf
+[ 98%] Built target nios_app.elf
+[100%] Creating nios_app.elf.objdump.
+[100%] Reporting memory available for stack + heap in nios_app.elf.
+[ 98%] Creating onchip_memory.hex.
+[100%] Built target create-objdump
+[100%] Built target create-hex
+nios_app.elf
+ * 299.50 KB - Program size (code + initialized data).
+ * 206.22 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+
+12:57:42 Build Finished. 0 errors, 0 warnings. (took 32s.56ms)
+

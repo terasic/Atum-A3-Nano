@@ -1,0 +1,661 @@
+// ============================================================================
+// Copyright (c) 2024 by Terasic Technologies Inc.
+// ============================================================================
+//
+// Permission:
+//
+//   Terasic grants permission to use and modify this code for use
+//   in synthesis for all Terasic Development Boards and Altera Development
+//   Kits made by Terasic.  Other use of this code, including the selling
+//   ,duplication, or modification of any portion is strictly prohibited.
+//
+// Disclaimer:
+//
+//   This VHDL/Verilog or C/C++ source code is intended as a design reference
+//   which illustrates how these types of functions can be implemented.
+//   It is the user's responsibility to verify their design for
+//   consistency and functionality through the use of formal
+//   verification methods.  Terasic provides no warranty regarding the use
+//   or functionality of this code.
+//
+// ============================================================================
+//
+//  Terasic Technologies Inc
+//  No.80, Fenggong Rd., Hukou Township, Hsinchu County 303035. Taiwan
+//
+//
+//                     web: http://www.terasic.com/
+//                     email: support@terasic.com
+//
+// ============================================================================
+
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/alt_alarm.h> // time tick function (alt_nticks(), alt_ticks_per_second())
+#include "system.h"
+#include "io.h"
+#include "VVP_FR.h"
+#include <sys/alt_cache.h>
+
+#include "ff.h"
+#include "diskio.h"
+#include "sys/alt_alarm.h"
+#include ".\terasic_sdcard\terasic_includes.h"
+#include ".\terasic_sdcard\sd_lib.h"
+
+#include "mem_verify.h"
+#include "VVP_FR.h"
+#include "Bitmap_File.h"
+
+#define DEBUG_MODE 1
+#define VERBOSE_PRINTF if (DEBUG_MODE) printf
+
+/*
+void draw_test_pattern(void *pFrameBase, const int width, const int height){
+	static int nPattern = 0;
+    uint8_t *pSample, *pBlock;
+    int y, x, nSkip, nBlockHeigh;
+
+    pSample = (uint8_t *)pFrameBase;
+
+	VERBOSE_PRINTF("Change Pattern %d: ", nPattern);
+
+
+	if (nPattern == 0) {
+		// white
+		VERBOSE_PRINTF("white Pattern\r\n");
+		memset((void *)pFrameBase, 0xFF, width*height*3);
+	}else if (nPattern >= 1 && nPattern <=3){
+		switch(nPattern){
+			case 1: VERBOSE_PRINTF("Red Pattern\r\n");break;
+			case 2: VERBOSE_PRINTF("Green Pattern\r\n");break;
+			case 3: VERBOSE_PRINTF("Blue Pattern\r\n");break;
+		}
+
+		// init block line
+		nBlockHeigh = 8;
+		pBlock = (uint8_t *)malloc(width*3*nBlockHeigh);
+		if (pBlock == NULL){
+			VERBOSE_PRINTF("failed to allocate memory %d byte\r\n", width*3*nBlockHeigh);
+			return;
+		}
+		pSample = pBlock;
+		for(y=0;y<nBlockHeigh;y++){
+			for(x=0;x<width;x++){
+				*pSample++ = (nPattern == 3)?255:0; //B
+				*pSample++ = (nPattern == 2)?255:0; //G
+				*pSample++ = (nPattern == 1)?255:0; //R
+			}
+		}
+
+		// copy block
+		pSample = (uint8_t *)pFrameBase;
+	    for(y=0;y<height;y+=nBlockHeigh){
+	    	memcpy(pSample, pBlock, width*3*nBlockHeigh);
+	    	pSample += width*3*nBlockHeigh;
+	    }
+	    free(pBlock);
+	}else if (nPattern >= 4 && nPattern <=5){
+		switch(nPattern){
+			case 4: nSkip = 4; break;
+			case 5: nSkip = 8; break;
+		}
+		VERBOSE_PRINTF("Grid x%d\r\n", nSkip);
+		nBlockHeigh = 8;
+
+		// init block
+		pBlock = (uint8_t *)malloc(width*3*nBlockHeigh);
+		if (pBlock == NULL){
+			VERBOSE_PRINTF("failed to allocate memory %d byte\r\n", width*3*nBlockHeigh);
+			return;
+		}
+		pSample = pBlock;
+	    for(y=0;y<nBlockHeigh;y++){
+	        for(x=0;x<width;x++){
+	            if ((x%4) == 0 || (y%4) == 0){
+	                *pSample++ = 255; //B
+	                *pSample++ = 255; //G
+	                *pSample++ = 255; //R
+	            }else{
+	                *pSample++ = 0;
+	                *pSample++ = 0;
+	                *pSample++ = 0;
+	            }
+	        }
+
+	    }
+
+
+		// copy block
+		pSample = (uint8_t *)pFrameBase;
+	    for(y=0;y<height;y+=nBlockHeigh){
+	    	memcpy(pSample, pBlock, width*3*nBlockHeigh);
+	    	pSample += width*3*nBlockHeigh;
+	    }
+	    free(pBlock);
+
+	}
+
+    nPattern++;
+    nPattern %= 6;
+
+}
+*/
+/*
+void draw_test_pattern(void *pFrameBase, const int width, const int height) {
+    static int nPattern = 0;
+    uint8_t *pSample, *pBlock;
+    int y, x, nSkip, nBlockHeigh; // nSkip is uninitialized if nPattern is not 4 or 5, but not used outside those blocks.
+
+    // pSample is initialized here for the whole function if needed,
+    // but each pattern block re-initializes it as necessary.
+    // pSample = (uint8_t *)pFrameBase; // Not strictly needed here if all paths re-init
+
+    VERBOSE_PRINTF("Change Pattern %d: ", nPattern);
+
+    if (nPattern == 0) {
+        // 從白色到黑色的垂直漸層
+        VERBOSE_PRINTF("White to Black Vertical Gradient Pattern\r\n");
+        pSample = (uint8_t *)pFrameBase; // 指向影格緩衝區的開頭
+
+        if (width <= 0 || height <= 0) {
+            VERBOSE_PRINTF("Invalid width or height\r\n");
+            // Cycle pattern to avoid getting stuck if this is an error condition
+            nPattern++;
+            nPattern %= 6;
+            return;
+        }
+
+        for (y = 0; y < height; y++) {
+            double intensity_ratio;
+            uint8_t color_value;
+
+            if (height == 1) {
+                // 如果只有一行，則為純白色
+                intensity_ratio = 1.0;
+            } else {
+                // 強度比例從 1.0 (y=0, 白色) 降到 0.0 (y=height-1, 黑色)
+                intensity_ratio = (double)(height - 1 - y) / (double)(height - 1);
+            }
+            color_value = (uint8_t)(intensity_ratio * 255.0);
+
+            for (x = 0; x < width; x++) {
+                *pSample++ = color_value; // B (藍色通道)
+                *pSample++ = color_value; // G (綠色通道)
+                *pSample++ = color_value; // R (紅色通道)
+            }
+        }
+    } else if (nPattern >= 1 && nPattern <= 3) {
+        switch (nPattern) {
+            case 1: VERBOSE_PRINTF("Red Pattern\r\n"); break;
+            case 2: VERBOSE_PRINTF("Green Pattern\r\n"); break;
+            case 3: VERBOSE_PRINTF("Blue Pattern\r\n"); break;
+        }
+
+        // init block line
+        nBlockHeigh = 8;
+        // Ensure height is sufficient for at least one block copy, or handle small heights
+        if (height < nBlockHeigh && height > 0) {
+             nBlockHeigh = height; // Adjust block height if image height is smaller
+        } else if (height == 0) {
+            // Cycle pattern to avoid issues if height is zero
+            nPattern++;
+            nPattern %= 6;
+            return;
+        }
+
+
+        pBlock = (uint8_t *)malloc(width * 3 * nBlockHeigh);
+        if (pBlock == NULL) {
+            VERBOSE_PRINTF("failed to allocate memory %d byte\r\n", width * 3 * nBlockHeigh);
+            // Cycle pattern to avoid getting stuck
+            nPattern++;
+            nPattern %= 6;
+            return;
+        }
+        pSample = pBlock;
+        for (y = 0; y < nBlockHeigh; y++) {
+            for (x = 0; x < width; x++) {
+                *pSample++ = (nPattern == 3) ? 255 : 0; //B
+                *pSample++ = (nPattern == 2) ? 255 : 0; //G
+                *pSample++ = (nPattern == 1) ? 255 : 0; //R
+            }
+        }
+
+        // copy block
+        pSample = (uint8_t *)pFrameBase;
+        for (y = 0; y < height; y += nBlockHeigh) {
+            // Ensure we don't write past the buffer if height is not a multiple of nBlockHeigh
+            int current_block_height = ((y + nBlockHeigh) > height) ? (height - y) : nBlockHeigh;
+            if (current_block_height > 0) {
+                 memcpy(pSample, pBlock, width * 3 * current_block_height);
+                 pSample += width * 3 * current_block_height;
+            }
+        }
+        free(pBlock);
+    } else if (nPattern >= 4 && nPattern <= 5) {
+        // nSkip needs to be initialized before use for safety, though switch does it.
+        // Defaulting it or ensuring nPattern covers all cases for nSkip.
+        // The original code is fine as nSkip is only used if nPattern is 4 or 5.
+        switch (nPattern) {
+            case 4: nSkip = 4; break;
+            case 5: nSkip = 8; break;
+            // default: nSkip = 4; // Should not happen with current nPattern logic
+        }
+        VERBOSE_PRINTF("Grid x%d\r\n", nSkip); // nSkip would be uninitialized if nPattern was not 4 or 5
+        nBlockHeigh = 8;
+        // Ensure height is sufficient
+        if (height < nBlockHeigh && height > 0) {
+             nBlockHeigh = height;
+        } else if (height == 0) {
+            nPattern++;
+            nPattern %= 6;
+            return;
+        }
+
+
+        // init block
+        pBlock = (uint8_t *)malloc(width * 3 * nBlockHeigh);
+        if (pBlock == NULL) {
+            VERBOSE_PRINTF("failed to allocate memory %d byte\r\n", width * 3 * nBlockHeigh);
+            nPattern++;
+            nPattern %= 6;
+            return;
+        }
+        pSample = pBlock;
+        for (y = 0; y < nBlockHeigh; y++) {
+            for (x = 0; x < width; x++) {
+                if ((x % nSkip) == 0 || (y % nSkip) == 0) { // Using nSkip from switch
+                    *pSample++ = 255; //B
+                    *pSample++ = 255; //G
+                    *pSample++ = 255; //R
+                } else {
+                    *pSample++ = 0;
+                    *pSample++ = 0;
+                    *pSample++ = 0;
+                }
+            }
+        }
+
+        // copy block
+        pSample = (uint8_t *)pFrameBase;
+        for (y = 0; y < height; y += nBlockHeigh) {
+            int current_block_height = ((y + nBlockHeigh) > height) ? (height - y) : nBlockHeigh;
+            if (current_block_height > 0) {
+                memcpy(pSample, pBlock, width * 3 * current_block_height);
+                pSample += width * 3 * current_block_height;
+            }
+        }
+        free(pBlock);
+    }
+
+    nPattern++;
+    nPattern %= 6; // 總共有6種圖案 (0到5)
+}*/
+
+
+
+// BGR 顏色結構定義 (可以放在函數外部如果多處使用)
+typedef struct {
+    uint8_t b;
+    uint8_t g;
+    uint8_t r;
+} BGRColor;
+
+void draw_test_pattern(void *pFrameBase, const int width, const int height) {
+    static int nPattern = 0;
+    uint8_t *pSample, *pBlock;
+    int y, x, nSkip = 0, nBlockHeigh; // Initialize nSkip
+
+    VERBOSE_PRINTF("Change Pattern %d: ", nPattern);
+
+    if (nPattern == 0) {
+        // 從白色到黑色的垂直漸層
+        VERBOSE_PRINTF("White to Black Vertical Gradient Pattern\r\n");
+        pSample = (uint8_t *)pFrameBase;
+
+        if (width <= 0 || height <= 0) {
+            VERBOSE_PRINTF("Invalid width or height\r\n");
+            nPattern++;
+            nPattern %= 7; // 現在有 7 種圖案 (0-6)
+            return;
+        }
+
+        for (y = 0; y < height; y++) {
+            double intensity_ratio;
+            uint8_t color_value;
+
+            if (height == 1) {
+                intensity_ratio = 1.0;
+            } else {
+                intensity_ratio = (double)(height - 1 - y) / (double)(height - 1);
+            }
+            color_value = (uint8_t)(intensity_ratio * 255.0);
+
+            for (x = 0; x < width; x++) {
+                *pSample++ = color_value; // B
+                *pSample++ = color_value; // G
+                *pSample++ = color_value; // R
+            }
+        }
+    } else if (nPattern >= 1 && nPattern <= 3) {
+        switch (nPattern) {
+            case 1: VERBOSE_PRINTF("Red Pattern\r\n"); break;
+            case 2: VERBOSE_PRINTF("Green Pattern\r\n"); break;
+            case 3: VERBOSE_PRINTF("Blue Pattern\r\n"); break;
+        }
+        nBlockHeigh = 8;
+        if (height < nBlockHeigh && height > 0) {
+             nBlockHeigh = height;
+        } else if (height <= 0 || width <= 0) {
+            VERBOSE_PRINTF("Invalid width or height for R/G/B pattern\r\n");
+            nPattern++;
+            nPattern %= 7;
+            return;
+        }
+
+        pBlock = (uint8_t *)malloc(width * 3 * nBlockHeigh);
+        if (pBlock == NULL) {
+            VERBOSE_PRINTF("failed to allocate memory %d byte\r\n", width * 3 * nBlockHeigh);
+            nPattern++;
+            nPattern %= 7;
+            return;
+        }
+        pSample = pBlock;
+        for (y = 0; y < nBlockHeigh; y++) {
+            for (x = 0; x < width; x++) {
+                *pSample++ = (nPattern == 3) ? 255 : 0; //B
+                *pSample++ = (nPattern == 2) ? 255 : 0; //G
+                *pSample++ = (nPattern == 1) ? 255 : 0; //R
+            }
+        }
+        pSample = (uint8_t *)pFrameBase;
+        for (y = 0; y < height; y += nBlockHeigh) {
+            int current_block_height = ((y + nBlockHeigh) > height) ? (height - y) : nBlockHeigh;
+            if (current_block_height > 0) {
+                 memcpy(pSample, pBlock, width * 3 * current_block_height);
+                 pSample += width * 3 * current_block_height;
+            }
+        }
+        free(pBlock);
+    } else if (nPattern >= 4 && nPattern <= 5) {
+        switch (nPattern) {
+            case 4: nSkip = 4; break;
+            case 5: nSkip = 8; break;
+        }
+        VERBOSE_PRINTF("Grid x%d\r\n", nSkip);
+        nBlockHeigh = 8;
+        if (height < nBlockHeigh && height > 0) {
+             nBlockHeigh = height;
+        } else if (height <= 0 || width <= 0) {
+            VERBOSE_PRINTF("Invalid width or height for Grid pattern\r\n");
+            nPattern++;
+            nPattern %= 7;
+            return;
+        }
+
+        pBlock = (uint8_t *)malloc(width * 3 * nBlockHeigh);
+        if (pBlock == NULL) {
+            VERBOSE_PRINTF("failed to allocate memory %d byte\r\n", width * 3 * nBlockHeigh);
+            nPattern++;
+            nPattern %= 7;
+            return;
+        }
+        pSample = pBlock;
+        for (y = 0; y < nBlockHeigh; y++) {
+            for (x = 0; x < width; x++) {
+                if ((x % nSkip) == 0 || (y % nSkip) == 0) {
+                    *pSample++ = 255; //B
+                    *pSample++ = 255; //G
+                    *pSample++ = 255; //R
+                } else {
+                    *pSample++ = 0;
+                    *pSample++ = 0;
+                    *pSample++ = 0;
+                }
+            }
+        }
+        pSample = (uint8_t *)pFrameBase;
+        for (y = 0; y < height; y += nBlockHeigh) {
+            int current_block_height = ((y + nBlockHeigh) > height) ? (height - y) : nBlockHeigh;
+            if (current_block_height > 0) {
+                memcpy(pSample, pBlock, width * 3 * current_block_height);
+                pSample += width * 3 * current_block_height;
+            }
+        }
+        free(pBlock);
+    } else if (nPattern == 6) { // 新的同心矩形圖案
+        VERBOSE_PRINTF("Concentric Rectangles Pattern\r\n");
+        pSample = (uint8_t *)pFrameBase;
+
+        if (width <= 0 || height <= 0) {
+            VERBOSE_PRINTF("Invalid width or height\r\n");
+            nPattern++;
+            nPattern %= 7;
+            return;
+        }
+
+        int centerX = width / 2;
+        int centerY = height / 2;
+
+        // 動態調整條帶寬度，使其在不同解析度下看起來效果接近
+        // 目標是從中心到最短邊緣大約有 8 個條帶
+        int min_half_dim = ((width < height ? width : height) / 2);
+        int band_width = min_half_dim / 8;
+        if (band_width == 0) { // 避免除以零或寬度為0的情況
+            band_width = 1;
+        }
+
+
+        // 定義顏色調色盤 (BGR 順序)
+        // static const 確保調色盤只初始化一次並且是唯讀的
+        static const BGRColor palette[] = {
+            {  0,   0, 255}, // 紅色
+            {  0, 255,   0}, // 綠色
+            {255,   0,   0}, // 藍色
+            {  0, 255, 255}, // 黃色 (R+G, 在BGR中是 G+B=0, R=255, G=255 -> B=0, G=255, R=255) -> 應該是 B=0, G=255, R=255
+            {255, 255,   0}, // 青色 (G+B, 在BGR中是 B+R=255, G=0 -> B=255, G=255, R=0)   -> 應該是 B=255, G=255, R=0
+            {255,   0, 255}, // 洋紅色 (R+B, 在BGR中是 B+G=255, R=0 -> B=255, G=0, R=255) -> 應該是 B=255, G=0, R=255
+            {192, 192, 192}, // 亮灰色
+            {128, 128, 128}, // 中灰色
+            { 64,  64,  64}  // 暗灰色
+        };
+        int num_palette_colors = sizeof(palette) / sizeof(palette[0]);
+
+        for (y = 0; y < height; y++) {
+            for (x = 0; x < width; x++) {
+                int dx = x - centerX;
+                int dy = y - centerY;
+
+                // 計算切比雪夫距離 (Chebyshev distance) 以形成矩形
+                int dist = (abs(dx) > abs(dy)) ? abs(dx) : abs(dy);
+
+                int layer_index = dist / band_width;
+                BGRColor current_color = palette[layer_index % num_palette_colors];
+
+                *pSample++ = current_color.b;
+                *pSample++ = current_color.g;
+                *pSample++ = current_color.r;
+            }
+        }
+    }
+
+
+    nPattern++;
+    nPattern %= 7; // 現在總共有 7 種圖案 (0 到 6)
+}
+
+int local_query_users(void){
+    int nChoice = 0;
+    scanf("%d", &nChoice);
+    printf("%d\r\n", nChoice);
+    return nChoice;
+}
+
+int query_display_interval_sec(){
+	int nInterval_sec = 0; // ASAP
+	int nStatus;
+
+	nStatus = IORD(PIO_SW_BASE, 0x00) & 0x03;
+
+	switch(nStatus){
+		case 0: nInterval_sec = 5; break;
+		case 1: nInterval_sec = 3; break;
+		case 2: nInterval_sec = 10; break;
+		case 3: nInterval_sec = 0; break;
+	}
+
+
+
+	return nInterval_sec;
+
+}
+
+
+
+// return true if find files;
+bool bitmap_find_files (char szFileList[][FF_MAX_LFN], int nBufCnt, int *pnFileCnt, const int nWidth, const int nHeight)
+{
+	bool bSuccess = false;
+	int nFileCnt, i;
+
+	*pnFileCnt = 0;
+
+	bSuccess = BMP_find_image_file(szFileList, nBufCnt, &nFileCnt, nWidth, nHeight);
+	if (!bSuccess)
+		printf("Failed to find bitmap files!\r\n");
+	else if (nFileCnt == 0)
+		printf("Not supported bitmap file is found!\r\n");
+	else{
+		bSuccess = true;
+		*pnFileCnt = nFileCnt;
+		printf("%d supported bitmap files are found.\r\n",nFileCnt);
+		for(i=0;i<nFileCnt;i++){
+			printf("%d: %s\r\n", i, szFileList[i]);
+		}
+	}
+
+	return bSuccess;
+
+}
+
+void bitmap_show(){
+	char szFileList[100][FF_MAX_LFN];
+	bool bFindFile;
+	int nFileCnt, nBufCnt, nFileIndex, nIntervalSec=-1,nSec;
+	unsigned int time_next;
+	const int nWidth = 1280;
+	const int nHeight = 720;
+	int Frame_Set = 0;
+	uint32_t BuffsetSet_BaseAddr[2] = {SDRAM_BASE,  SDRAM_BASE+nWidth*nHeight*4};
+
+	VVP_FR FR(INTEL_VVP_VFR_BASE);
+
+	// init frame reader
+	FR.Config(BuffsetSet_BaseAddr[0], BuffsetSet_BaseAddr[1], Frame_Set, nWidth, nHeight);
+	FR.ShowStatus();
+
+	// find bitmap file list
+	nBufCnt = sizeof(szFileList)/sizeof(szFileList[0]);
+	bFindFile = bitmap_find_files (szFileList, nBufCnt, &nFileCnt, nWidth, nHeight);
+
+
+	// show bitmap file on hmdi out. if no file found, show test patttern.
+	nFileIndex = 0;
+
+	while(1){
+		nSec = query_display_interval_sec();
+		time_next = alt_nticks() + nSec*alt_ticks_per_second();
+		if (nSec != nIntervalSec){
+			nIntervalSec = nSec;
+			printf("display internal: %d sec\r\n", nIntervalSec);
+		}
+		//
+
+		Frame_Set = (Frame_Set==0)?1:0;
+		if (bFindFile && (nFileCnt > 0)){
+			printf("darw frame %d:%s\r\n", Frame_Set, szFileList[nFileIndex]);
+			BMP_draw(szFileList[nFileIndex], (void *)BuffsetSet_BaseAddr[Frame_Set], nWidth, nHeight);
+			// next bitmap
+			nFileIndex++;;
+			if (nFileIndex >= nFileCnt)
+				nFileIndex = 0;
+
+		}else{
+			printf("darw frame %d\r\n", Frame_Set);
+			draw_test_pattern((void *)BuffsetSet_BaseAddr[Frame_Set], nWidth, nHeight);
+		}
+		// display
+		FR.Switch(Frame_Set);
+
+		// wait
+		while(alt_nticks() < time_next){
+			usleep(1);
+		}
+
+
+	}	 //while
+
+}
+
+
+//===============================================================
+int main(void){
+
+#if 1
+    FRESULT fr;     /* Return value */
+    FATFS fs;
+
+
+	printf("===== Picture Viewer Demo =====\r\n");
+
+	SDLIB_Init();
+
+	fr = f_mount(&fs, "", 0); /* Mount the default drive */
+	if (fr != FR_OK){
+		printf("Failed to mount the default drive!\r\n");
+	}else{
+
+		bitmap_show();
+
+	}
+#else
+
+	//printf("Hello Nick\r\n");
+
+	VVP_FR FR(INTEL_VVP_VFR_BASE);
+	int Frame_Set = 0;
+	const int width = 1280;
+	const int height = 720;
+	uint32_t BuffsetSet_BaseAddr[2] = {SDRAM_BASE,  SDRAM_BASE+width*height*4};
+
+
+	FR.Config(BuffsetSet_BaseAddr[0], BuffsetSet_BaseAddr[1], Frame_Set);
+	FR.ShowStatus();
+
+	while(1){
+		Frame_Set = (Frame_Set==0)?1:0;
+		printf("darw frame %d\r\n", Frame_Set);
+		draw_test_pattern((void *)BuffsetSet_BaseAddr[Frame_Set], width, height);
+		alt_dcache_flush((void *)BuffsetSet_BaseAddr[Frame_Set], width*height*4);
+
+		// display
+		FR.Switch(Frame_Set);
+
+		// toggle frame
+		usleep(500*1000);
+
+		local_query_users();
+
+	}
+#endif
+	return 0;
+}
+
+
+
+
