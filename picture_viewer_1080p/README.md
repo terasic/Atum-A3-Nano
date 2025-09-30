@@ -6,7 +6,7 @@ A Nios V processor-based design example demonstrating how to sequentially displa
 
 The demo code is built around RTL code and a Nios V processor to implement the SD card controller and file system. The Nios V application scans the SD card, identifies bitmap files that meet display criteria, and generates a display list. From this list, it selects a file, decodes it, and stores the RGB image data into SDRAM before signaling the display subsystem.
 
-The display subsystem leverages the Altera Video and Image Processing Suite. Using the Frame Reader IP, it retrieves the image data from SDRAM, then employs the Clocked Video Output and Full Rate to Clocked Video Converter IPs to prepare the data for the HDMI transmitter (FTP410). The processed image is finally rendered on an HDMI monitor.
+The display subsystem leverages the Altera Video and Image Processing Suite. Using the Frame Reader IP, it retrieves the image data from SDRAM, then employs the Clocked Video Output and Full Rate to Clocked Video Converter IPs to prepare the data for the HDMI transmitter (TFP410). The processed image is finally rendered on an HDMI monitor.
 
 Note :  The photos placed in the SD Card must be BMP files with a resolution of 1280x720.
 
