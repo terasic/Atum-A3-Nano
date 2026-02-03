@@ -15,6 +15,7 @@ The following table lists the available demonstration projects in this branch:
 | **[golden_top](https://github.com/terasic/Atum-A3-Nano/blob/rel/25.1/golden_top/README.md)** | A trusted, pre-configured Quartus template project for the Atum A3 Nano, providing a correct hardware configuration starting point to accelerate development. |
 | **[picture_viewer_1080p](https://github.com/terasic/Atum-A3-Nano/blob/rel/25.1/picture_viewer_1080p/README.md)** | A Nios V processor-based design example demonstrating how to sequentially display bitmap image files from a Micro SD card on an HDMI monitor. |
 | **[sdcard_filesystem](https://github.com/terasic/Atum-A3-Nano/blob/rel/25.1/sdcard_filesystem/README.md)** | A Nios V processor-based design example demonstrating how to read from and write to an SD card on the Atum A3 Nano. |
+| **[Handwritten_Digit_Recognition](https://github.com/terasic/Atum-A3-Nano/blob/rel/25.1/Handwritten_Digit_Recognition/README.md)** | A Verilog HDL design demonstrating real-time handwritten digit recognition (0–9) using a CNN accelerator with D8M camera input. |
 
 ---
 
