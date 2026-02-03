@@ -1,0 +1,380 @@
+18:11:59 Buildscript generation: test::Debug in D:\FPGAProject\A3SK_D8M_GPIO\A3SK_D8M_VIP_Classes\software\test\build\Debug
+cmake -DCMAKE_BUILD_TYPE:STRING=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=ON -G "Unix Makefiles" "D:\\FPGAProject\\A3SK_D8M_GPIO\\A3SK_D8M_VIP_Classes\\software\\test" 
+-- The C compiler identification is GNU 13.2.0
+-- The CXX compiler identification is GNU 13.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: D:/intelFPGA/25.1Pro/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: D:/intelFPGA/25.1Pro/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: D:/intelFPGA/25.1Pro/riscfree/toolchain/riscv32-unknown-elf/bin/riscv32-unknown-elf-gcc.exe
+-- Configuring done (4.3s)
+-- Generating done (0.1s)
+-- Build files have been written to: D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/build/Debug
+18:12:05 Buildscript generation finished (took 5215 ms)
+18:12:05 **** Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[  1%] Building ASM object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ecc_exception_entry.S.obj
+[  1%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ecc_error_inject.c.obj
+[  2%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_env_lock.c.obj
+[  4%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_environ.c.obj
+[  4%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ecc_exception.c.obj
+[  7%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_irq_handler.c.obj
+[  7%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dcache_flush_no_writeback.c.obj
+[  8%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dma_txchan_open.c.obj
+[  9%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_exit.c.obj
+[ 11%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dcache_flush.c.obj
+[ 11%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dma_rxchan_open.c.obj
+[  7%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_execve.c.obj
+[ 12%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dcache_flush_all.c.obj
+[  5%] Building ASM object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/machine_trap.S.obj
+[  6%] Building ASM object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_log_macro.S.obj
+[ 13%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_uncached_malloc.c.obj
+[ 14%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_close.c.obj
+[ 15%] Building ASM object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_vic_vector_table.S.obj
+[ 16%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_busy_sleep.c.obj
+[ 17%] Building ASM object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_mcount.S.obj
+[ 17%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_unlink.c.obj
+[ 18%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_ioctl.c.obj
+[ 19%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_wait.c.obj
+[ 20%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_write.c.obj
+[ 21%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_cmn_dfl.c.obj
+[ 22%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_cmn_inf.c.obj
+[ 23%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_niosv.c.obj
+[ 24%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_platform_api_niosv.c.obj
+[ 24%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_fpga_api_cmn_msg.c.obj
+[ 25%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/mtimer.c.obj
+[ 27%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dev.c.obj
+[ 27%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/alt_sys_init.c.obj
+[ 28%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/mtm/drivers_common/HAL/src/intel_vvp_core_irq.c.obj
+[ 29%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fd_lock.c.obj
+[ 30%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_iic.c.obj
+[ 31%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_find_dev.c.obj
+[ 31%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/mtm/drivers_common/src/intel_vvp_core.c.obj
+[ 31%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fcntl.c.obj
+[ 32%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_getpid.c.obj
+[ 33%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_instruction_exception_register.c.obj
+[ 34%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/mtm/intel_vvp_vfw/src/intel_vvp_vfw.c.obj
+[ 35%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_iic_isr_register.c.obj
+[ 36%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_usleep.c.obj
+[ 37%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/mtm/intel_vvp_scaler/src/intel_vvp_scaler.c.obj
+[ 40%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fork.c.obj
+[ 41%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_getchar.c.obj
+[ 38%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_do_ctors.c.obj
+[ 39%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_do_dtors.c.obj
+[ 45%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_vic_isr_wrapper.c.obj
+[ 43%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_alarm_start.c.obj
+[ 42%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_errno.c.obj
+[ 43%] Building ASM object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/crt0.S.obj
+[ 48%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_sysid_qsys.c.obj
+[ 49%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_isatty.c.obj
+[ 44%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_dev_llist_insert.c.obj
+[ 45%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fs_reg.c.obj
+[ 47%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fd_unlock.c.obj
+[ 46%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_gmon.c.obj
+[ 50%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_icache_flush_all.c.obj
+[ 51%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_kill.c.obj
+[ 53%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_link.c.obj
+[ 54%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_log_printf.c.obj
+[ 54%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_open.c.obj
+[ 54%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_main.c.obj
+[ 55%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_malloc_lock.c.obj
+[ 55%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_putstr.c.obj
+[ 56%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_printf.c.obj
+[ 58%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_putcharbuf.c.obj
+[ 62%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_read.c.obj
+[ 62%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_release_fd.c.obj
+[ 60%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_rename.c.obj
+[ 63%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_settod.c.obj
+[ 61%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_sbrk.c.obj
+[ 63%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_remap_cached.c.obj
+[ 62%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_flash_dev.c.obj
+[ 64%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_tick.c.obj
+[ 65%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_fstat.c.obj
+[ 67%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_get_fd.c.obj
+[ 66%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_times.c.obj
+[ 68%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_uncached_free.c.obj
+[ 69%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_io_redirect.c.obj
+[ 69%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_ioctl.c.obj
+[ 70%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_read.c.obj
+[ 71%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_write.c.obj
+[ 71%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_icache_flush.c.obj
+[ 72%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/intel_lw_uart_write.c.obj
+[ 74%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_load.c.obj
+[ 74%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_putchar.c.obj
+[ 76%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_remap_uncached.c.obj
+[ 76%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/mtm/drivers_common/src/intel_vvp_quantizer.c.obj
+[ 79%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_find_file.c.obj
+[ 77%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_tls.c.obj
+[ 78%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_lseek.c.obj
+[ 80%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/intel_lw_uart_fd.c.obj
+[ 86%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_timer_vars.c.obj
+[ 86%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/intel_lw_uart_read.c.obj
+[ 90%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/intel_niosv_irq.c.obj
+[ 83%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_stat.c.obj
+[ 83%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/intel_lw_uart_ioctl.c.obj
+[ 83%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/intel_lw_uart_init.c.obj
+[ 80%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/HAL/src/alt_gettod.c.obj
+[ 89%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_fd.c.obj
+[ 86%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_timer_ts.c.obj
+[ 89%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_timer_sc.c.obj
+[ 90%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_jtag_uart_init.c.obj
+[ 91%] Building C object test_bsp/CMakeFiles/hal2_bsp.dir/drivers/src/altera_avalon_i2c.c.obj
+In file included from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/alt_sys_init.c:63:
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/alt_sys_init.c: In function 'alt_sys_init':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/drivers/inc/altera_avalon_sysid_qsys.h:50:50: warning: this 'while' clause does not guard... [-Wmisleading-indentation]
+   50 | #define ALTERA_AVALON_SYSID_QSYS_INIT(name, dev) while (0)
+      |                                                  ^~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/alt_sys_init.c:106:5: note: in expansion of macro 'ALTERA_AVALON_SYSID_QSYS_INIT'
+  106 |     ALTERA_AVALON_SYSID_QSYS_INIT ( SYSID_QSYS, sysid_qsys);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/drivers/inc/intel_lw_uart.h:340,
+                 from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/alt_sys_init.c:65:
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/drivers/inc/intel_lw_uart_fd.h:132:5: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'while'
+  132 |     {                                                         \
+      |     ^
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/drivers/inc/intel_lw_uart.h:357:5: note: in expansion of macro 'INTEL_LW_UART_DEV_INIT'
+  357 |     INTEL_LW_UART_DEV_INIT(name, dev)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/alt_sys_init.c:107:5: note: in expansion of macro 'INTEL_LW_UART_INIT'
+  107 |     INTEL_LW_UART_INIT ( LW_UART_0, lw_uart_0);
+      |     ^~~~~~~~~~~~~~~~~~
+[ 92%] Linking C static library libhal2_bsp.a
+[ 92%] Built target hal2_bsp
+[ 93%] Building CXX object CMakeFiles/test.elf.dir/mipi_bridge_config.cpp.obj
+[ 94%] Building CXX object CMakeFiles/test.elf.dir/auto_focus.cpp.obj
+[ 96%] Building CXX object CMakeFiles/test.elf.dir/queue.cpp.obj
+[ 97%] Building CXX object CMakeFiles/test.elf.dir/mipi_camera_config.cpp.obj
+[ 95%] Building CXX object CMakeFiles/test.elf.dir/I2C.cpp.obj
+[ 97%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/auto_focus.cpp: In function 'alt_u16 Focus_Window(int, int)':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/auto_focus.cpp:80:11: warning: 'end_focus' may be used uninitialized [-Wmaybe-uninitialized]
+   80 |    return end_focus;
+      |           ^~~~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/auto_focus.cpp:49:12: note: 'end_focus' was declared here
+   49 |    alt_u16 end_focus;
+      |            ^~~~~~~~~
+[ 98%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 98%] Creating intel_onchip_memory.hex.
+[ 99%] Creating test.elf.objdump.
+[100%] Reporting memory available for stack + heap in test.elf.
+[100%] Built target create-objdump
+test.elf
+ * 135.61 KB - Program size (code + initialized data).
+ * 51.34 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-hex
+18:18:17 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+In file included from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/drivers/inc/altera_avalon_i2c_regs.h:34,
+                 from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/drivers/inc/altera_avalon_i2c.h:43,
+                 from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/I2C.h:18,
+                 from D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:4:
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'void display_ai_status_uart()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:356:19: error: 'AI_INTERFACE_BASE' was not declared in this scope; did you mean 'ONE_AI_INTERFACE_0_BASE'?
+  356 |     IOWR_32DIRECT(AI_INTERFACE_BASE, ONE_AI_USER_OBJECTS_CLASSES * 4, 0);  // Reset to class 0
+      |                   ^~~~~~~~~~~~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/HAL/inc/io.h:131:23: note: in definition of macro 'SWIO'
+  131 |       : [addrReg] "r"(BASE), [imm] "i"(OFFSET), [DATAReg] "r"(__tmpData)  \
+      |                       ^~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test_bsp/HAL/inc/io.h:152:8: note: in expansion of macro '__IO_CALC_ADDRESS_DYNAMIC'
+  152 |   SWIO(__IO_CALC_ADDRESS_DYNAMIC((BASE), (OFFSET)), 0, (DATA))
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:356:5: note: in expansion of macro 'IOWR_32DIRECT'
+  356 |     IOWR_32DIRECT(AI_INTERFACE_BASE, ONE_AI_USER_OBJECTS_CLASSES * 4, 0);  // Reset to class 0
+      |     ^~~~~~~~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:598:13: warning: unused variable 'ret_val' [-Wunused-variable]
+  598 |         int ret_val;
+      |             ^~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:620:2: error: expected '}' at end of input
+  620 | }
+      |  ^
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:464:1: note: to match this '{'
+  464 | {
+      | ^
+make[2]: *** [CMakeFiles/test.elf.dir/build.make:79: CMakeFiles/test.elf.dir/main.cpp.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:118: CMakeFiles/test.elf.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+"D:/intelFPGA/25.1Pro/riscfree/build_tools/bin/make.exe -j all" terminated with exit code 2. Build might be incomplete.
+18:18:51 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:598:13: warning: unused variable 'ret_val' [-Wunused-variable]
+  598 |         int ret_val;
+      |             ^~~~~~~
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:620:2: error: expected '}' at end of input
+  620 | }
+      |  ^
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:464:1: note: to match this '{'
+  464 | {
+      | ^
+make[2]: *** [CMakeFiles/test.elf.dir/build.make:79: CMakeFiles/test.elf.dir/main.cpp.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:118: CMakeFiles/test.elf.dir/all] Error 2
+make: *** [Makefile:91: all] Error 2
+"D:/intelFPGA/25.1Pro/riscfree/build_tools/bin/make.exe -j all" terminated with exit code 2. Build might be incomplete.
+18:19:12 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:598:13: warning: unused variable 'ret_val' [-Wunused-variable]
+  598 |         int ret_val;
+      |             ^~~~~~~
+[ 93%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 99%] Creating test.elf.objdump.
+[100%] Reporting memory available for stack + heap in test.elf.
+[100%] Creating intel_onchip_memory.hex.
+test.elf
+ * 140.39 KB - Program size (code + initialized data).
+ * 46.56 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-hex
+[100%] Built target create-objdump
+18:19:35 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:598:13: warning: unused variable 'ret_val' [-Wunused-variable]
+  598 |         int ret_val;
+      |             ^~~~~~~
+[ 93%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 99%] Creating test.elf.objdump.
+[100%] Reporting memory available for stack + heap in test.elf.
+[100%] Creating intel_onchip_memory.hex.
+test.elf
+ * 140.39 KB - Program size (code + initialized data).
+ * 46.56 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-objdump
+[100%] Built target create-hex
+18:19:38 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 98%] Built target test.elf
+[ 98%] Built target create-hex
+[ 99%] Built target create-objdump
+[100%] Reporting memory available for stack + heap in test.elf.
+test.elf
+ * 140.39 KB - Program size (code + initialized data).
+ * 46.56 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+18:22:08 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:598:13: warning: unused variable 'ret_val' [-Wunused-variable]
+  598 |         int ret_val;
+      |             ^~~~~~~
+[ 93%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 99%] Creating test.elf.objdump.
+[ 99%] Creating intel_onchip_memory.hex.
+[100%] Reporting memory available for stack + heap in test.elf.
+test.elf
+ * 140.39 KB - Program size (code + initialized data).
+ * 46.56 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-objdump
+[100%] Built target create-hex
+18:29:33 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:598:13: warning: unused variable 'ret_val' [-Wunused-variable]
+  598 |         int ret_val;
+      |             ^~~~~~~
+[ 93%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 99%] Reporting memory available for stack + heap in test.elf.
+[ 99%] Creating intel_onchip_memory.hex.
+[100%] Creating test.elf.objdump.
+test.elf
+ * 140.44 KB - Program size (code + initialized data).
+ * 46.53 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-hex
+[100%] Built target create-objdump
+18:33:58 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+[ 93%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 98%] Creating intel_onchip_memory.hex.
+[ 99%] Creating test.elf.objdump.
+[100%] Reporting memory available for stack + heap in test.elf.
+test.elf
+ * 138.10 KB - Program size (code + initialized data).
+ * 48.86 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-objdump
+[100%] Built target create-hex
+18:34:11 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 98%] Built target test.elf
+[ 99%] Reporting memory available for stack + heap in test.elf.
+[100%] Built target create-objdump
+[100%] Built target create-hex
+test.elf
+ * 138.10 KB - Program size (code + initialized data).
+ * 48.86 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+18:35:21 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 92%] Building CXX object CMakeFiles/test.elf.dir/main.cpp.obj
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp: In function 'int main()':
+D:/FPGAProject/A3SK_D8M_GPIO/A3SK_D8M_VIP_Classes/software/test/main.cpp:560:10: warning: unused variable 'ret_val' [-Wunused-variable]
+  560 |      int ret_val;
+      |          ^~~~~~~
+[ 93%] Linking CXX executable test.elf
+[ 98%] Built target test.elf
+[ 98%] Creating intel_onchip_memory.hex.
+[100%] Creating test.elf.objdump.
+[100%] Reporting memory available for stack + heap in test.elf.
+test.elf
+ * 140.42 KB - Program size (code + initialized data).
+ * 46.54 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+[100%] Built target create-objdump
+[100%] Built target create-hex
+18:35:25 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 98%] Built target test.elf
+[ 99%] Built target create-objdump
+[100%] Reporting memory available for stack + heap in test.elf.
+[100%] Built target create-hex
+test.elf
+ * 140.42 KB - Program size (code + initialized data).
+ * 46.54 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+18:35:28 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 98%] Built target test.elf
+[ 99%] Reporting memory available for stack + heap in test.elf.
+[ 99%] Built target create-hex
+[100%] Built target create-objdump
+test.elf
+ * 140.42 KB - Program size (code + initialized data).
+ * 46.54 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report

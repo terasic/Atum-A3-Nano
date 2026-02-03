@@ -1,0 +1,167 @@
+#============================================================
+# Build by Terasic System Builder
+#============================================================
+
+set_global_assignment -name FAMILY "Agilex 3"
+set_global_assignment -name DEVICE A3CZ135BB18AE7S
+set_global_assignment -name TOP_LEVEL_ENTITY "Atum_A3_Nano"
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "24.3"
+set_global_assignment -name LAST_QUARTUS_VERSION "25.1.0 Pro Edition"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:01:34 Ò»ÔÂ 08,2026"
+set_global_assignment -name DEVICE_FILTER_PACKAGE VPBGA
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 7839644
+set_global_assignment -name IP_FILE ip/TERASIC_CAMERA/rgb_fifo.ip
+set_global_assignment -name IP_FILE ip/TERASIC_CAMERA/Bayer_LineBuffer.ip
+set_global_assignment -name IP_FILE ip/TERASIC_CAMERA/add4.ip
+set_global_assignment -name IP_FILE ip/TERASIC_CAMERA/add2.ip
+set_global_assignment -name VERILOG_FILE Atum_A3_Nano.v
+set_global_assignment -name IP_FILE ResetRelease.ip
+set_global_assignment -name SDC_FILE Atum_A3_Nano.SDC
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+#============================================================
+# Configuration scheme/pin 
+#============================================================
+set_global_assignment -name USE_CONF_DONE SDM_IO16
+set_global_assignment -name USE_INIT_DONE SDM_IO13
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_100MHZ
+set_global_assignment -name DEVICE_INITIALIZATION_CLOCK OSC_CLK_1_125MHZ
+
+
+#============================================================
+# CLOCK
+#============================================================
+set_instance_assignment -name IO_STANDARD "1.2-V" -to CLOCK0_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CLOCK1_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CLOCK2_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CLOCK3_50
+set_location_assignment PIN_K43 -to CLOCK0_50
+set_location_assignment PIN_A8 -to CLOCK1_50
+set_location_assignment PIN_AH9 -to CLOCK2_50
+set_location_assignment PIN_R2 -to CLOCK3_50
+
+#============================================================
+# KEY
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to KEY[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to KEY[1]
+set_location_assignment PIN_E2 -to KEY[0]
+set_location_assignment PIN_K3 -to KEY[1]
+
+#============================================================
+# LED
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[3]
+set_location_assignment PIN_AG2 -to LED[0]
+set_location_assignment PIN_AM6 -to LED[1]
+set_location_assignment PIN_AF1 -to LED[2]
+set_location_assignment PIN_AF2 -to LED[3]
+
+#============================================================
+# SW
+#============================================================
+set_instance_assignment -name IO_STANDARD "1.2-V" -to SW[0]
+set_instance_assignment -name IO_STANDARD "1.2-V" -to SW[1]
+set_location_assignment PIN_A19 -to SW[0]
+set_location_assignment PIN_B24 -to SW[1]
+
+#============================================================
+# PMOD_0
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TMD0_D[7]
+set_location_assignment PIN_AD6 -to TMD0_D[0]
+set_location_assignment PIN_P6 -to TMD0_D[1]
+set_location_assignment PIN_AB9 -to TMD0_D[2]
+set_location_assignment PIN_AE12 -to TMD0_D[3]
+set_location_assignment PIN_P4 -to TMD0_D[4]
+set_location_assignment PIN_AA4 -to TMD0_D[5]
+set_location_assignment PIN_AH12 -to TMD0_D[6]
+set_location_assignment PIN_AA6 -to TMD0_D[7]
+
+#============================================================
+# GPIO_D, GPIO connect to D8M-GPIO
+#============================================================
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CAMERA_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CAMERA_I2C_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CAMERA_PWDN_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_CS_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_I2C_SCL
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_I2C_SDA
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_MCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_D[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_HS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_PIXEL_VS
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_REFCLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MIPI_RESET_n
+set_location_assignment PIN_D26 -to CAMERA_I2C_SCL
+set_location_assignment PIN_K21 -to CAMERA_I2C_SDA
+set_location_assignment PIN_H21 -to CAMERA_PWDN_n
+set_location_assignment PIN_K18 -to MIPI_CS_n
+set_location_assignment PIN_B14 -to MIPI_I2C_SCL
+set_location_assignment PIN_F27 -to MIPI_I2C_SDA
+set_location_assignment PIN_H27 -to MIPI_MCLK
+set_location_assignment PIN_A11 -to MIPI_PIXEL_CLK
+set_location_assignment PIN_B11 -to MIPI_PIXEL_D[0]
+set_location_assignment PIN_H7 -to MIPI_PIXEL_D[1]
+set_location_assignment PIN_B5 -to MIPI_PIXEL_D[2]
+set_location_assignment PIN_W9 -to MIPI_PIXEL_D[3]
+set_location_assignment PIN_F3 -to MIPI_PIXEL_D[4]
+set_location_assignment PIN_U9 -to MIPI_PIXEL_D[5]
+set_location_assignment PIN_C2 -to MIPI_PIXEL_D[6]
+set_location_assignment PIN_U12 -to MIPI_PIXEL_D[7]
+set_location_assignment PIN_F7 -to MIPI_PIXEL_D[8]
+set_location_assignment PIN_P9 -to MIPI_PIXEL_D[9]
+set_location_assignment PIN_F13 -to MIPI_PIXEL_HS
+set_location_assignment PIN_A9 -to MIPI_PIXEL_VS
+set_location_assignment PIN_B8 -to MIPI_REFCLK
+set_location_assignment PIN_F18 -to MIPI_RESET_n
+
+#============================================================
+# End of pin assignments by Terasic System Builder
+#============================================================
+
+set_global_assignment -name IP_FILE ip/system/system_clock_in.ip
+set_global_assignment -name IP_FILE ip/system/system_reset_in.ip
+set_global_assignment -name QSYS_FILE system.qsys
+set_global_assignment -name IP_FILE ip/system/system_iopll_0.ip
+set_global_assignment -name IP_FILE ip/system/system_intel_niosv_m_0.ip
+set_global_assignment -name IP_FILE ip/system/system_intel_onchip_memory.ip
+set_global_assignment -name IP_FILE ip/system/jtag_uart.ip
+set_global_assignment -name IP_FILE ip/system/sysid_qsys.ip
+set_global_assignment -name IP_FILE ip/system/timer.ip
+set_global_assignment -name IP_FILE ip/system/jtag_master.ip
+set_global_assignment -name IP_FILE ip/system/system_intel_lw_uart_0.ip
+set_global_assignment -name IP_FILE ip/system/led.ip
+set_global_assignment -name IP_FILE ip/system/sw.ip
+set_global_assignment -name IP_FILE ip/system/key.ip
+set_global_assignment -name IP_FILE ip/system/mipi_pwdn_n.ip
+set_global_assignment -name IP_FILE ip/system/mipi_reset_n.ip
+set_global_assignment -name IP_FILE ip/system/i2c_mipi.ip
+set_global_assignment -name IP_FILE ip/system/i2c_camera.ip
+set_global_assignment -name IP_FILE ip/system/system_terasic_camera_0.ip
+set_global_assignment -name IP_FILE ip/system/system_terasic_auto_focus_0.ip
+set_global_assignment -name IP_FILE ip/system/system_intel_vvp_scaler_0.ip
+set_global_assignment -name IP_FILE ip/system/system_intel_vvp_vfw_0.ip
+set_global_assignment -name IP_FILE ip/system/vid_buff.ip
+set_global_assignment -name IP_FILE ip/system/system_one_ai_interface_0.ip

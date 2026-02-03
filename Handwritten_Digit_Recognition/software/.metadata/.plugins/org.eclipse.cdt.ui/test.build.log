@@ -1,0 +1,14 @@
+18:35:28 **** Incremental Build of configuration Debug for project test ****
+"D:\\intelFPGA\\25.1Pro\\riscfree\\build_tools\\bin\\make.exe" -j all 
+[ 92%] Built target hal2_bsp
+[ 98%] Built target test.elf
+[ 99%] Reporting memory available for stack + heap in test.elf.
+[ 99%] Built target create-hex
+[100%] Built target create-objdump
+test.elf
+ * 140.42 KB - Program size (code + initialized data).
+ * 46.54 KB - Free for stack + heap.
+[100%] Built target niosv-stack-report
+
+18:35:29 Build Finished. 0 errors, 0 warnings. (took 891ms)
+
